@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.paragraph-text {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shipping-container {
+  width: 100%;
+  margin: 50px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.shipping-container .shipping-info {
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  width: 60%;
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 15px;
+}
+.shipping-container .shipping-info .header-text {
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.shipping-container .shipping-info .shipping-image {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.shipping-container .shipping-info .shipping-image img {
+  width: 70%;
+  height: 70%;
+}
+.shipping-container .shipping-info .shipping-content {
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+}
+.shipping-container .shipping-info .shipping-content label {
+  margin-right: 20px;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 1.1rem;
+  padding: 5px 0;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  display: inline-block;
+}
+.shipping-container .shipping-info .shipping-content span {
+  display: inline-block;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: #CD1818;
+  text-shadow: 0 0 0.05rem #CD1818;
+  transition: 0.5s ease-in-out;
+}
+.shipping-container .shipping-info .shipping-content input, .shipping-container .shipping-info .shipping-content select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  padding: 15px 15px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+  letter-spacing: 2px;
+  transition: 0.2s ease-in-out;
+}
+.shipping-container .shipping-info .shipping-content input:focus, .shipping-container .shipping-info .shipping-content select:focus {
+  outline: none;
+  border: 2px solid rgb(69, 194, 47);
+  transition: 0.2s ease-in-out;
+}
+.shipping-container .shipping-info .shipping-content .error {
+  border: 1px solid #CD1818;
+}
+.shipping-container .shipping-info .shipping-content option {
+  background: #1E1B26;
+  color: #fff;
+}
+.shipping-container .shipping-info .shipping-content .btn-submit {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 10px 25px;
+  border: none;
+  background: rgb(69, 194, 47);
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.1);
+  position: relative;
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+.shipping-container .shipping-info .shipping-content .btn-submit::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.shipping-container .shipping-info .shipping-content .btn-submit:hover {
+  box-shadow: 0 0 3rem rgba(255, 255, 255, 0.2);
+}
+.shipping-container .shipping-info .shipping-content .btn-submit:hover::before {
+  transition: 0.3s ease-in-out;
+  height: 100%;
+}
+
+@media (min-width: 1000px) {
+  .shipping-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=Shipping.css.map */

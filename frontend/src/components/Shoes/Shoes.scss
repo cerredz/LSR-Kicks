@@ -1,0 +1,229 @@
+@import "../Variables/Variables.scss";
+
+
+
+
+
+.shoes-container {
+
+
+    background: $primary-background;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    height: 100%;
+
+    .banner-container {
+        height: 35vh;
+
+        .title {
+            font-weight: 800;
+            font-size: 2.5rem;
+            color: white;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 10px 20px;
+            letter-spacing: 5px;
+        }
+    }
+
+    .mens, .womens, .new-arrivals, .nike, .jordan, .yeezy {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    .mens {
+        background-image: url("../Assets/mensBanner.jpg");
+    }
+
+    .womens {
+        background-image: url("../Assets/womenBanner.jpeg");
+    }
+
+    .new-arrivals {
+        background-image: url("../Assets/newarrivals.jpg");
+    }
+
+    .search-container {
+        margin: 30px;
+
+        .search-content {
+
+            border-bottom: 2px solid $blackColor;
+            input {
+                border: none;
+                outline: none;
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 5px;
+                background: inherit;
+                color: #fff;
+                
+
+            }
+            svg {
+                font-size: 1.5rem;
+            }
+
+
+        }
+
+        
+    }
+
+    .filter-container {
+        display: none;
+    }
+
+    .inventory-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        
+        position: relative;
+        
+        .shoe-item {
+            
+            width: 250px;
+            height: 300px;
+            flex-direction: column;
+            margin: 15px 10px;
+            cursor: pointer;
+            
+            
+            
+
+            .shoe-image-container {
+                width: 100%;
+                height: 80%;
+                background: rgba(255,255,255,.1);
+                border-radius: 10px;
+                
+                
+                .nike {
+                    width: 55%;
+                    height: 70%;
+                }
+
+                .jordan {
+                    width: 55%;
+                    height: 50%;
+                }
+                
+
+                &:hover {
+
+                    .nike, .jordan, img {
+                        scale: 1.3;
+                    }
+                }
+                
+                img {
+                    width: 60%;
+                    height: 50%;
+                    
+                }
+            }
+            
+            div {
+                text-align: center;
+                .shoe-name {
+                    font-size: .9rem;
+                    letter-spacing: 1px;
+                    margin-top: 5px;
+                    
+                }
+    
+                .shoe-price {
+                    font-size: .8rem;
+                    letter-spacing: 2px;
+                    opacity: .7;
+                }
+            }
+
+           
+
+            
+        }
+    }
+
+    
+}
+
+@media (min-width: 1000px) {
+    
+    .shoes-container {
+        
+        .filter-container {
+            display: block;
+            position: relative;
+            width: inherit;
+            border-right: 2px solid rgba(255,255,255,.5);
+            height: 100%;
+            overflow: auto;
+            
+
+            .header-text {
+                text-align: center;
+                margin: 10px;
+            }
+
+            .brand-container, .size-container {
+                padding: 10px 20px;
+                
+
+                .brand-heading, .size-heading{
+                    justify-content: space-between;
+                    cursor: pointer;
+                }
+
+                ul{
+                   
+                    
+                    li{
+                        display: flex;
+                        align-items: center;
+
+                        input {
+                            margin: 2px 5px;
+                            scale: 1.1;
+                        }
+
+                        p {
+                            letter-spacing: 3px;
+                            font-weight: 300;
+                            margin: 0 5px;
+                            color: rgba(255,255,255,.4);
+                        }
+                    }
+                }
+
+                svg {
+                    cursor: pointer;
+                    font-size: 1.5rem;
+
+                    &:hover {
+                        rotate: 180deg;
+                    }
+                }
+            }
+        }
+
+        .search-container {
+            display: none;
+        }
+
+        .inventory-container {
+            margin: 25px 15px;
+        }
+
+    }
+
+    .content-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+}

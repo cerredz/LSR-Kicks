@@ -1,0 +1,200 @@
+@import "../Variables/Variables.scss";
+
+
+.contact-container {
+    position: relative;
+    background: $primary-background;
+    width: 100vw;
+    flex-direction: column;
+    
+    
+
+
+    .contact-form {
+        
+        width: 70%;
+        background: rgba(255,255,255,.1);
+        border-radius: 30px;
+        height: min-content;
+        padding: 20px;
+        margin-top: 175px;
+        color: #fff;
+        
+
+        .icon-container {
+
+            width: 100px;
+            height: 100px;
+            background: #1E1B26;
+            border-radius: 50%;
+            margin: 5px auto;
+            transform: translateY(-75%);
+            img {
+                width: 60%;
+                height: 60%;
+            }
+        }
+        .contact-heading {
+            flex-direction: column;
+            transform: translateY(-50%);
+            text-align: center;
+
+            .header-text {
+                font-size: 2.2rem;
+            }
+
+            .paragraph-text {
+                font-size: .9rem;
+                color: rgba(255,255,255,.4);
+                width: 100%;
+                letter-spacing: 2px;
+
+                
+            }
+            a {
+                text-decoration: none;
+                color: $primary-red;
+                font-weight: 500;
+                
+                
+            }
+            
+        }
+
+        .contact-info {
+
+            position: relative;
+            transform: translateY(-10%);
+            
+            .form {
+                .left {
+                    float: left;
+                    width: 50%;
+                }
+
+                .right {
+                    
+                    float: right;
+                    width: 50%;
+                }
+
+                label {
+                    font-size: .9rem;
+                    letter-spacing: 1px;
+                    
+                    
+                }
+                input, select, textarea {
+                    width: 80%;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid grey;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                    font-size: 1.3rem;
+                    color: rgba(255,255,255,.4);
+                    
+                    outline: none;
+
+                    &:focus {
+                        border-bottom: 1px solid $primary-red
+                    }
+                    
+                    //make the placeholder match the label
+                    &::placeholder {
+                        font-size: .9rem;
+                        letter-spacing: 1px;
+                        
+                    }
+                }
+                
+                //select is 2px bigger than input, so we have to translate it up 2 px
+                select {
+                    transform: translateY(-2px);
+                    option {
+                        background: #1E1B26;
+                    }
+                }
+
+                textarea {
+                    min-width: 150px;
+                    width: 100%;
+                    resize: none;
+                    max-height: 150px;
+                   
+
+
+                }
+
+                .btn-container{
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    button {
+                        width: 20%;
+                        padding: 10px;
+                        cursor: pointer;
+                        background: $primary-red;
+                        color: $darkerWhite;
+                        border: none;
+                        border-radius: 5px;
+                        opacity: .8;
+
+                        &:hover {
+                            opacity: 1;
+                            scale: 1.1;
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    .thank-you-container {
+        background: rgba(255,255,255,.4);
+        position: absolute;
+        top: 0;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding: 25px;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+        
+
+        .heading {
+            
+            img {
+                width: 50px;
+                margin: 5px 10px;
+            }
+
+            .header-text{
+                font-size: 2rem;
+            }
+
+            
+        }
+
+        .sub-heading {
+
+            .paragraph-text {
+                letter-spacing: 2px;
+                color: black
+            }
+        }
+
+        
+    }
+}
+
+@media (min-width: 1000px) {
+    .contact-container {
+
+        
+
+        .contact-form {
+            width: 40%;
+        }
+    }
+}

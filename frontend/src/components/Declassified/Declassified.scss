@@ -1,0 +1,41 @@
+@import "../Variables/Variables.scss";
+
+.declassified-container {
+    color: #fff;
+    background: #05010d;
+
+    hr {
+        border: none;
+        height: 2px;
+        width: 90%;
+        background: rgba(255,255,255,.1);
+        margin: 0 auto;
+    }
+
+    section {
+
+
+        .left-blue-glow {
+            position: absolute;
+            height: 150px;
+            width: 100px;
+            background: $primary-blue;
+            top: 75%;
+            transform: translateX(-50%);
+            
+
+        }
+
+       
+
+        .right {
+            right: 0;
+            transform: translateX(50%);
+        }
+
+        .left {
+            left: 0;
+            transform: translateX(-50%);
+        }
+    }
+}

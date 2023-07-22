@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.paragraph-text {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.buy-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #05010d;
+  color: #fff;
+}
+.buy-container .shoe-container {
+  margin-top: 150px;
+}
+.buy-container .shoe-container .shoe-image-container {
+  position: relative;
+  width: 90%;
+  height: 65vh;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.buy-container .shoe-container .shoe-image-container img {
+  width: 50%;
+  height: 65%;
+}
+.buy-container .shoe-container .shoe-image-container .nike {
+  width: 45%;
+  height: 65%;
+}
+.buy-container .shoe-container .shoe-image-container .jordan {
+  width: 60%;
+  height: 60%;
+}
+.buy-container .shoe-container .shoe-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 90%;
+  margin: 0 auto;
+}
+.buy-container .shoe-container .shoe-info .btn-add {
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  opacity: 0.8;
+  transition: 0.3s ease-in-out;
+  margin: 10px 0;
+}
+.buy-container .shoe-container .shoe-info .btn-add:hover {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.buy-container .shoe-container .shoe-info .facts-container {
+  margin-top: 25px;
+  padding: 10px;
+}
+.buy-container .shoe-container .shoe-info .facts-container ul li {
+  justify-content: flex-start;
+}
+.buy-container .shoe-container .shoe-info .facts-container ul li svg {
+  font-size: 1.2rem;
+  margin: 4px 5px;
+}
+.buy-container .shoe-container .shoe-info .facts-container ul li .paragraph-text {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+.buy-container .shoe-container .shoe-info .facts-container ul li .paragraph-text span {
+  color: aqua;
+}
+.buy-container .shoe-container .shoe-info .name-and-price {
+  margin: 25px 0;
+  padding: 25px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.buy-container .shoe-container .shoe-info .name-and-price .paragraph-text {
+  font-style: italic;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.buy-container .shoe-container .shoe-info .name-and-price .paragraph-text a {
+  color: aqua;
+}
+.buy-container .shoe-container .shoe-info .name-and-price .header-text, .buy-container .shoe-container .shoe-info .name-and-price .subheader-text, .buy-container .shoe-container .shoe-info .name-and-price .paragraph-text {
+  margin: 5px 0;
+}
+.buy-container .shoe-container .shoe-info .size {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 25px 0;
+  border-radius: 25px;
+}
+.buy-container .shoe-container .shoe-info .size .error {
+  color: #CD1818;
+  margin-left: 10px;
+  font-style: italic;
+}
+.buy-container .shoe-container .shoe-info .size .subheader-text {
+  font-size: 1.1rem;
+  letter-spacing: none;
+  font-weight: 800;
+  margin-top: 13px;
+  letter-spacing: 2px;
+}
+.buy-container .shoe-container .shoe-info .size .size-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.buy-container .shoe-container .shoe-info .size .size-container .size-div {
+  border: 1px solid black;
+  width: 80%;
+  padding: 3px 0;
+  display: grid;
+  cursor: pointer;
+}
+.buy-container .shoe-container .shoe-info .size .size-container .size-div .subheader-text {
+  margin: auto;
+}
+.buy-container .shoe-container .shoe-info .size .size-container .size-div:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.buy-container .shoe-container .shoe-info .size .size-container .active {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+.buy-container .shoe-container .shoe-info .size label {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.buy-container .shoe-container .shoe-info .size select {
+  width: 25%;
+  padding: 5px 10px;
+  margin: 5px 0;
+  font-size: 1.1rem;
+  background: transparent;
+  border: 1px solid black;
+  color: #fff;
+}
+.buy-container .shoe-container .shoe-info .size select option {
+  font-size: 1.1rem;
+  background: #1E1B26;
+}
+.buy-container .shoe-container hr {
+  width: 75%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buy-container .shoe-container .other-categories-container {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 10px;
+}
+.buy-container .shoe-container .other-categories-container .header-text {
+  font-size: 2rem;
+  text-shadow: 0 0 0.05rem black;
+}
+.buy-container .shoe-container .other-categories-container .banner-container {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+.buy-container .shoe-container .other-categories-container .banner-container .womens-container, .buy-container .shoe-container .other-categories-container .banner-container .newarrival-container {
+  margin: 50px;
+  border-radius: 20px;
+  width: 150px;
+  height: 250px;
+  cursor: pointer;
+  flex-direction: column;
+}
+.buy-container .shoe-container .other-categories-container .banner-container .womens-container img, .buy-container .shoe-container .other-categories-container .banner-container .newarrival-container img {
+  width: 100%;
+  height: 70%;
+  border-radius: 50%;
+}
+.buy-container .shoe-container .other-categories-container .banner-container .womens-container img:hover, .buy-container .shoe-container .other-categories-container .banner-container .newarrival-container img:hover {
+  scale: 1.1;
+  transform: translateY(-10px);
+}
+.buy-container .shoe-container .other-categories-container .banner-container .womens-container .paragraph-text, .buy-container .shoe-container .other-categories-container .banner-container .newarrival-container .paragraph-text {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.buy-container .shoe-container .other-categories-container .banner-container .womens-container img {
+  box-shadow: 0 0 3rem rgb(240, 156, 208);
+}
+.buy-container .shoe-container .other-categories-container .banner-container .newarrival-container img {
+  box-shadow: 0 0 2rem #000000;
+}
+.buy-container .buttons-container {
+  width: 100%;
+  margin: 10px auto;
+}
+.buy-container .buttons-container .btn-continue {
+  background: #1327de;
+  position: relative;
+  border: 2px solid transparent;
+  padding: 10px 25px;
+  z-index: 2;
+  box-shadow: 0 0 3rem rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+  border-radius: 30px;
+  z-index: 2;
+}
+.buy-container .buttons-container .btn-continue::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: #1327de;
+  border-radius: inherit;
+  filter: blur(0.75rem);
+  z-index: -1;
+  transition: 0.4s ease-in-out;
+}
+.buy-container .buttons-container .btn-continue:hover {
+  scale: 1.1;
+}
+.buy-container .buttons-container .btn-continue:hover::before {
+  filter: blur(2rem);
+  transition: 0.4s ease-in-out;
+}
+
+@media (max-width: 700px) {
+  .buy-container .shoe-container .shoe-image-container {
+    height: 50vh;
+  }
+  .buy-container .shoe-container .shoe-image-container img {
+    width: 75%;
+    height: 45%;
+  }
+  .buy-container .shoe-container .shoe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .buy-container .shoe-container .shoe-info .btn-add {
+    width: auto;
+  }
+}
+@media (min-width: 1000px) {
+  .buy-container .shoe-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+  .buy-container .shoe-container .shoe-image-container {
+    width: 82%;
+    height: 70vh;
+  }
+  .buy-container .shoe-container .shoe-image-container img {
+    width: 60%;
+    height: 70%;
+  }
+  .buy-container .shoe-container .shoe-image-container .nike {
+    width: 50%;
+  }
+  .buy-container .shoe-container .shoe-image-container .jordan {
+    width: 55%;
+    height: 60%;
+  }
+  .buy-container .shoe-container .shoe-info {
+    display: block;
+    position: relative;
+    transform: translateX(-10%);
+  }
+  .buy-container .shoe-container .shoe-info .name-and-price {
+    margin: 0;
+  }
+  .buy-container .shoe-container .shoe-info .name-and-price .header-text {
+    font-size: 2.5rem;
+  }
+  .buy-container .shoe-container .shoe-info .name-and-price .subheader-text {
+    font-size: 1.3rem;
+  }
+  .buy-container .shoe-container .shoe-info .name-and-price .paragraph-text {
+    font-size: 0.9rem;
+  }
+  .buy-container .shoe-container .shoe-info .size .subheader-text {
+    margin: 0;
+  }
+  .buy-container .shoe-container .shoe-info .size .size-container {
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 25px;
+    justify-items: start;
+  }
+  .buy-container .shoe-container .shoe-info .size .size-container .size-div {
+    margin: 5px 0;
+  }
+  .buy-container .shoe-container .shoe-info .btn-add {
+    transform: translateY(0);
+    height: -moz-min-content;
+    height: min-content;
+    width: 40%;
+    font-size: 1.3rem;
+    margin: 5px auto;
+    bottom: 0;
+  }
+  .buy-container .shoe-container .shoe-info .facts-container {
+    margin-top: 25px;
+    padding: 10px;
+  }
+  .buy-container .shoe-container .shoe-info .facts-container ul li {
+    justify-content: flex-start;
+  }
+  .buy-container .shoe-container .shoe-info .facts-container ul li svg {
+    font-size: 1.2rem;
+    margin: 4px 5px;
+  }
+  .buy-container .shoe-container .shoe-info .facts-container ul li .paragraph-text {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-style: italic;
+  }
+}/*# sourceMappingURL=Buy.css.map */

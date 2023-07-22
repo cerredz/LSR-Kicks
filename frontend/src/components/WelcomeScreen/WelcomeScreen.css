@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.paragraph-text {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-container {
+  scroll-behavior: smooth;
+  position: relative;
+  padding: 25px;
+  color: #fff;
+  background: #05010d;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.welcome-container .welcome-content {
+  width: 100%;
+  margin: 0 auto;
+}
+.welcome-container .welcome-content .welcome-title {
+  flex-direction: column;
+  position: relative;
+  margin-top: 125px;
+}
+.welcome-container .welcome-content .welcome-title .header-text {
+  font-size: min(6rem, 10vw);
+  text-align: center;
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+}
+.welcome-container .welcome-content .welcome-title .span {
+  font-style: italic;
+  background: linear-gradient(to right, #1327de, #7a06d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.welcome-container .welcome-content .welcome-title .subheader-text {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  z-index: 1;
+  width: 80%;
+}
+.welcome-container .welcome-content .welcome-title::before {
+  position: absolute;
+  content: "";
+  top: 0%;
+  bottom: 20%;
+  left: 30%;
+  width: 40%;
+  background: linear-gradient(to right, #1327de, #7a06d9);
+  filter: blur(8rem);
+}
+.welcome-container .welcome-content .brands-container {
+  flex-direction: column;
+  margin: 10px auto;
+}
+.welcome-container .welcome-content .brands-container .Nike:hover::before, .welcome-container .welcome-content .brands-container .Jordan:hover::before, .welcome-container .welcome-content .brands-container .Yeezy:hover::before {
+  right: 0;
+  transition: 0.5s ease-in-out;
+}
+.welcome-container .welcome-content .brands-container .Nike::before, .welcome-container .welcome-content .brands-container .Jordan::before, .welcome-container .welcome-content .brands-container .Yeezy::before {
+  position: absolute;
+  content: "";
+  top: calc(100% - 5px);
+  left: 0;
+  right: 100%;
+  height: 5px;
+  transition: 0.5s ease-in-out;
+  filter: blur(1.5rem);
+}
+.welcome-container .welcome-content .brands-container .Nike:hover .brand-title .header-text {
+  color: #1327de;
+}
+.welcome-container .welcome-content .brands-container .Nike::before {
+  background: #1327de;
+}
+.welcome-container .welcome-content .brands-container .Jordan:hover .brand-title .header-text {
+  color: rgb(192, 89, 195);
+}
+.welcome-container .welcome-content .brands-container .Jordan::before {
+  background: rgb(192, 89, 195);
+}
+.welcome-container .welcome-content .brands-container .Yeezy:hover .brand-title .header-text {
+  color: #7a06d9;
+}
+.welcome-container .welcome-content .brands-container .Yeezy::before {
+  background: #7a06d9;
+}
+.welcome-container .welcome-content .brands-container .brand {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  background: #1E1B26;
+  border-radius: 30px;
+  gap: 25px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+.welcome-container .welcome-content .brands-container .brand .open {
+  width: 250px;
+  transition: none;
+}
+.welcome-container .welcome-content .brands-container .brand .brand-title {
+  padding: 20px 20px;
+  width: 200px;
+  text-align: center;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  flex-direction: column;
+  transition: 0.1s ease-in-out;
+}
+.welcome-container .welcome-content .brands-container .brand .brand-title .header-text {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.welcome-container .welcome-content .brands-container .brand .brand-title .paragraph-text {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  margin-top: 5px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.welcome-container .welcome-content .brands-container .brand .brand-shoe .nike {
+  width: 120px;
+  height: 150px;
+}
+.welcome-container .welcome-content .brands-container .brand .brand-shoe .jordan {
+  width: 120px;
+  height: 90px;
+}
+.welcome-container .welcome-content .brands-container .brand .brand-shoe .yeezy {
+  width: 110px;
+  height: 90px;
+}
+.welcome-container .welcome-content .brands-container .brand .brand-arrow {
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.welcome-container .welcome-content .brands-container .brand .brand-arrow::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  transition: 0.25s ease-in-out;
+  background: rgba(255, 255, 255, 0.25);
+}
+.welcome-container .welcome-content .brands-container .brand .brand-arrow:hover svg {
+  transform: translateX(5px);
+}
+.welcome-container .welcome-content .brands-container .brand .brand-arrow:hover::before {
+  width: 100%;
+  transition: 0.25s ease-in-out;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container {
+  background: rgba(255, 255, 255, 0.05);
+  width: 400px;
+  margin-top: -20px;
+  padding: 5px 10px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  transition: 0.1s ease-in;
+  overflow-x: hidden;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow {
+  display: flex;
+  gap: 25px;
+  padding: 5px 1rem;
+  animation: caurosel 38s linear infinite;
+}
+@keyframes caurosel {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% + 300px));
+  }
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow .shoe {
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  width: -moz-min-content;
+  width: min-content;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow .shoe .paragraph-text {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow .shoe .price {
+  letter-spacing: 2px;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow .shoe:hover {
+  scale: 1.1;
+  background: rgba(255, 255, 255, 0.2);
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow .nike img {
+  width: 75px;
+  height: 85px;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow .jordan img {
+  width: 75px;
+  height: 70px;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .shoes-slideshow .yeezy img {
+  width: 80px;
+  height: 80px;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .btn-container .btn-shop {
+  border-radius: 30px;
+  border: none;
+  margin: 10px auto;
+  cursor: pointer;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 4rem rgba(255, 255, 255, 0.1);
+  position: relative;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .btn-container .btn-shop::before {
+  position: absolute;
+  content: "";
+  border-radius: inherit;
+  top: 0;
+  left: -10%;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.3s ease-in-out;
+  transform: skew(45deg);
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .btn-container .btn-shop:hover {
+  scale: 1.1;
+  color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 3rem rgba(255, 255, 255, 0.2);
+}
+.welcome-container .welcome-content .brands-container .caurosel-container .btn-container .btn-shop:hover::before {
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .welcome-container .welcome-content .welcome-title .subheader-text {
+    width: 60%;
+  }
+  .welcome-container .welcome-content .brands-container .brand .open {
+    width: 350px;
+    transition: 0.1s ease-in-out;
+  }
+  .welcome-container .welcome-content .brands-container .caurosel-open {
+    width: 600px;
+    transition: 0.1s ease-in-out;
+  }
+}
+@media (max-width: 600px) {
+  .welcome-container {
+    padding: 0;
+    margin: 0;
+  }
+  .welcome-container .bottom-left-glow {
+    display: none;
+  }
+  .welcome-container .welcome-content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .welcome-container .welcome-content .welcome-title .glow {
+    height: 0;
+    width: 0;
+  }
+  .welcome-container .welcome-content .welcome-title .subheader-text {
+    scale: 0.9;
+  }
+  .welcome-container .welcome-content .welcome-title .header-text {
+    font-size: 3rem;
+  }
+  .welcome-container .welcome-content .brands-container {
+    width: 100%;
+    margin: 25px 0;
+  }
+  .welcome-container .welcome-content .brands-container .brand {
+    scale: 0.8;
+    margin: 0;
+    grid-template-columns: 1fr 0.5fr 1fr;
+  }
+  .welcome-container .welcome-content .brands-container .brand .brand-shoe .jordan {
+    scale: 0.9;
+  }
+  .welcome-container .welcome-content .brands-container .caurosel-container {
+    width: 300px;
+  }
+  .welcome-container .welcome-content .brands-container::before {
+    position: absolute;
+    content: "";
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #1327de;
+    border-radius: 50%;
+    filter: blur(0.5rem);
+  }
+}/*# sourceMappingURL=WelcomeScreen.css.map */

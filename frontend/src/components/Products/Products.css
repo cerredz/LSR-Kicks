@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.paragraph-text {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.products-container {
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 125px;
+}
+.products-container hr {
+  margin: 50px 0;
+  border: none;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.4);
+}
+.products-container .product-names {
+  justify-content: flex-start;
+  gap: 25px;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 50px;
+}
+.products-container .product-names .product-name {
+  cursor: pointer;
+  gap: 10px;
+}
+.products-container .product-names .product-name h1 {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.3rem;
+}
+.products-container .product-names .product-name .active {
+  color: #fff;
+}
+.products-container .product-names .product-name svg {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.products-container .product-names .arrows {
+  position: absolute;
+  right: 10px;
+  display: flex;
+}
+.products-container .product-names .arrows svg {
+  margin: 0 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+}
+.products-container .product-names .arrows svg:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.products-container .products {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.products-container .products::-webkit-scrollbar {
+  display: none;
+}
+.products-container .products::-webkit-scrollbar-thumb {
+  display: none;
+}
+.products-container .products .shoe-container {
+  margin: 10px 5px;
+  padding: 10px;
+  flex-direction: column;
+  display: inline-block;
+  white-space: normal;
+  text-align: center;
+}
+.products-container .products .shoe-container .shoe-image {
+  width: 225px;
+  height: 175px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.products-container .products .shoe-container .shoe-image img {
+  width: 75%;
+}
+.products-container .products .shoe-container .shoe-image .price-text {
+  position: absolute;
+  bottom: -2px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  background: #05010d;
+  padding-top: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.products-container .products .shoe-container .subheader-text {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+.products-container .products .shoe-container .paragraph-text {
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+.products-container .products .shoe-container:hover .shoe-image {
+  border-color: #fff;
+}
+.products-container .products .shoe-container:hover .price-text {
+  transform: translateY(-5px);
+}
+.products-container .products .shoe-container:hover img {
+  transform: translateY(-5px);
+}
+.products-container .banners-container {
+  margin-top: 75px;
+  padding-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.products-container .banners-container .banner {
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.products-container .banners-container .banner .banner-img {
+  width: 100%;
+  height: 250px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.products-container .banners-container .banner .new-arrival {
+  background-image: url("../Assets/nikeAiGenerated.jpg");
+}
+.products-container .banners-container .banner .best-seller {
+  background-image: url("../Assets/ultraboostai.jpg");
+}
+.products-container .banners-container .banner .our-favorite {
+  background-image: url("../Assets/yeezyai.png");
+}
+.products-container .banners-container .banner .banner-text {
+  padding: 25px;
+}
+.products-container .banners-container .banner .banner-text .header-text {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  position: relative;
+}
+.products-container .banners-container .banner .banner-text .header-text::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  filter: blur(2rem);
+  opacity: 0.4;
+}
+.products-container .banners-container .banner .banner-text .new::before {
+  background: linear-gradient(to right, aqua, #1327de);
+}
+.products-container .banners-container .banner .banner-text .best::before {
+  background: linear-gradient(to right, #1327de, #7a06d9);
+}
+.products-container .banners-container .banner .banner-text .favorites::before {
+  background: linear-gradient(to right, #7a06d9, #FF2171);
+}
+.products-container .banners-container .banner .banner-text .paragraph-text {
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 5px;
+}
+.products-container .banners-container .banner .banner-text button {
+  margin: 15px auto;
+  margin-bottom: 0;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  padding: 7px 20px;
+  letter-spacing: 2px;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  box-shadow: 0 0 3rem rgba(255, 255, 255, 0.1);
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.products-container .banners-container .banner .banner-text button svg {
+  font-size: 1.1rem;
+}
+.products-container .banners-container .banner .banner-text button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: -10%;
+  width: 0;
+  filter: blur(1rem);
+  transition: 0.4s ease-in-out;
+}
+.products-container .banners-container .banner .banner-text button:hover svg {
+  transform: translateX(3px);
+}
+.products-container .banners-container .banner .banner-text button:hover::before {
+  width: 110%;
+  transition: 0.4s ease-in-out;
+}
+.products-container .banners-container .banner .banner-text .btn-new-arrival::before {
+  background: linear-gradient(to right, aqua, #1327de, transparent);
+  opacity: 0.4;
+}
+.products-container .banners-container .banner .banner-text .btn-best-seller::before {
+  background: linear-gradient(to right, #1327de, #7a06d9, transparent);
+  opacity: 0.4;
+}
+.products-container .banners-container .banner .banner-text .btn-our-favorite::before {
+  background: linear-gradient(to right, #7a06d9, #FF2171, transparent);
+  opacity: 0.4;
+}
+
+@media (min-width: 1000px) {
+  .products-container .product-names .product-name h1 {
+    font-size: 1.5rem;
+  }
+  .products-container .product-names .product-name svg {
+    font-size: 1.6rem;
+  }
+  .products-container .banners-container .banner {
+    width: 350px;
+  }
+  .products-container .banners-container .banner .banner-img {
+    height: 300px;
+  }
+  .products-container .banners-container .banner .banner-text .header-text {
+    font-size: 2.1rem;
+  }
+  .products-container .banners-container .banner .banner-text .paragraph-text {
+    font-size: 0.9rem;
+  }
+  .products-container .banners-container .banner .banner-text button {
+    font-size: 1rem;
+  }
+  .products-container .banners-container .banner .banner-text button svg {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 700px) {
+  .products-container .product-names .arrows {
+    display: none;
+  }
+  .products-container .products::-webkit-scrollbar {
+    background-color: #fff;
+    display: block;
+  }
+  .products-container .products::-webkit-scrollbar-thumb {
+    background-color: grey;
+    display: block;
+  }
+}/*# sourceMappingURL=Products.css.map */

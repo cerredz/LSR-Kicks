@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.paragraph-text {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shoes-container {
+  background: #05010d;
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  height: 100%;
+}
+.shoes-container .banner-container {
+  height: 35vh;
+}
+.shoes-container .banner-container .title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: white;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px 20px;
+  letter-spacing: 5px;
+}
+.shoes-container .mens, .shoes-container .womens, .shoes-container .new-arrivals, .shoes-container .nike, .shoes-container .jordan, .shoes-container .yeezy {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.shoes-container .mens {
+  background-image: url("../Assets/mensBanner.jpg");
+}
+.shoes-container .womens {
+  background-image: url("../Assets/womenBanner.jpeg");
+}
+.shoes-container .new-arrivals {
+  background-image: url("../Assets/newarrivals.jpg");
+}
+.shoes-container .search-container {
+  margin: 30px;
+}
+.shoes-container .search-container .search-content {
+  border-bottom: 2px solid #000000;
+}
+.shoes-container .search-container .search-content input {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  background: inherit;
+  color: #fff;
+}
+.shoes-container .search-container .search-content svg {
+  font-size: 1.5rem;
+}
+.shoes-container .filter-container {
+  display: none;
+}
+.shoes-container .inventory-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+}
+.shoes-container .inventory-container .shoe-item {
+  width: 250px;
+  height: 300px;
+  flex-direction: column;
+  margin: 15px 10px;
+  cursor: pointer;
+}
+.shoes-container .inventory-container .shoe-item .shoe-image-container {
+  width: 100%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.shoes-container .inventory-container .shoe-item .shoe-image-container .nike {
+  width: 55%;
+  height: 70%;
+}
+.shoes-container .inventory-container .shoe-item .shoe-image-container .jordan {
+  width: 55%;
+  height: 50%;
+}
+.shoes-container .inventory-container .shoe-item .shoe-image-container:hover .nike, .shoes-container .inventory-container .shoe-item .shoe-image-container:hover .jordan, .shoes-container .inventory-container .shoe-item .shoe-image-container:hover img {
+  scale: 1.3;
+}
+.shoes-container .inventory-container .shoe-item .shoe-image-container img {
+  width: 60%;
+  height: 50%;
+}
+.shoes-container .inventory-container .shoe-item div {
+  text-align: center;
+}
+.shoes-container .inventory-container .shoe-item div .shoe-name {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+.shoes-container .inventory-container .shoe-item div .shoe-price {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+@media (min-width: 1000px) {
+  .shoes-container .filter-container {
+    display: block;
+    position: relative;
+    width: inherit;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    height: 100%;
+    overflow: auto;
+  }
+  .shoes-container .filter-container .header-text {
+    text-align: center;
+    margin: 10px;
+  }
+  .shoes-container .filter-container .brand-container, .shoes-container .filter-container .size-container {
+    padding: 10px 20px;
+  }
+  .shoes-container .filter-container .brand-container .brand-heading, .shoes-container .filter-container .brand-container .size-heading, .shoes-container .filter-container .size-container .brand-heading, .shoes-container .filter-container .size-container .size-heading {
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .shoes-container .filter-container .brand-container ul li, .shoes-container .filter-container .size-container ul li {
+    display: flex;
+    align-items: center;
+  }
+  .shoes-container .filter-container .brand-container ul li input, .shoes-container .filter-container .size-container ul li input {
+    margin: 2px 5px;
+    scale: 1.1;
+  }
+  .shoes-container .filter-container .brand-container ul li p, .shoes-container .filter-container .size-container ul li p {
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin: 0 5px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  .shoes-container .filter-container .brand-container svg, .shoes-container .filter-container .size-container svg {
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  .shoes-container .filter-container .brand-container svg:hover, .shoes-container .filter-container .size-container svg:hover {
+    rotate: 180deg;
+  }
+  .shoes-container .search-container {
+    display: none;
+  }
+  .shoes-container .inventory-container {
+    margin: 25px 15px;
+  }
+  .content-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}/*# sourceMappingURL=Shoes.css.map */

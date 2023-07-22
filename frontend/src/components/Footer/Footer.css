@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.paragraph-text {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-container {
+  background: #1E1B26;
+  margin-top: 50px;
+  padding: 50px 0;
+}
+.footer-container .footer-content, .footer-container .footer-legal {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.footer-container .footer-content {
+  flex-direction: column;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .footer-content .footer-card {
+  flex-direction: column;
+  text-align: center;
+}
+.footer-container .footer-content .footer-card .subheader-text {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.footer-container .footer-content .footer-card ul {
+  list-style-type: none;
+}
+.footer-container .footer-content .footer-card ul li {
+  margin: 8px 0;
+  cursor: pointer;
+}
+.footer-container .footer-content .footer-card ul li .paragraph-text {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 400;
+}
+.footer-container .footer-content .footer-card ul li:hover .paragraph-text {
+  color: rgba(255, 255, 255, 0.9);
+}
+.footer-container .footer-legal {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.footer-container .footer-legal .social-media a {
+  color: inherit;
+  text-decoration: none;
+}
+.footer-container .footer-legal .social-media a svg {
+  margin: 0px 10px;
+  font-size: 2rem;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transform: translateY(0);
+}
+.footer-container .footer-legal .social-media a .youtube:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 3rem #CD1818, inset 0 0 2rem #CD1818;
+}
+.footer-container .footer-legal .social-media a .instagram:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 3rem #DE345A, inset 0 0 2rem #DE345A;
+}
+.footer-container .footer-legal .social-media a .twitter:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 3rem #1C9CEA, inset 0 0 2rem #1C9CEA;
+}
+.footer-container .footer-legal .social-media a .snapchat:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 3rem #F7F400, inset 0 0 2rem #F7F400;
+}
+.footer-container .footer-legal .paragraph-text {
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 2px;
+  margin: 5px;
+}
+.footer-container .footer-legal .payment-methods {
+  gap: 10px;
+}
+.footer-container .footer-legal .payment-methods img {
+  width: 40px;
+}
+.footer-container .footer-legal .payment-methods .apple, .footer-container .footer-legal .payment-methods .google, .footer-container .footer-legal .payment-methods .paypal {
+  background: #fff;
+  padding: 0 7px;
+  border-radius: 5px;
+  width: 27px;
+}
+
+@media (min-width: 1000px) {
+  .footer-container .footer-content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  .footer-container .footer-content .footer-card {
+    text-align: left;
+  }
+}
+@media (min-width: 1400px) {
+  .footer-container .footer-content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 100px;
+  }
+  .footer-container .footer-content .footer-card {
+    text-align: left;
+  }
+}/*# sourceMappingURL=Footer.css.map */

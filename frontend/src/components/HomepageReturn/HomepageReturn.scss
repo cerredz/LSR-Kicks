@@ -1,0 +1,28 @@
+@import "../Variables/Variables.scss";
+
+.homepage-container {
+    
+    padding: 50px;
+    background: $primary-background;
+
+    button {
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        color: $darkerWhite;
+        background: rgba(255,255,255,.1);
+        box-shadow: 0 0 3rem rgba(255,255,255,.1);
+        border: 2px solid transparent;
+        padding: 10px 25px;
+       
+
+        &:hover {
+            scale: 1.1;
+            transition: .3s ease-in-out;
+            box-shadow: 0 0 3rem rgba(255,255,255,.2);
+           
+        }
+
+
+    }
+}

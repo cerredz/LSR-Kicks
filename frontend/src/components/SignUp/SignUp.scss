@@ -1,0 +1,115 @@
+@import "../Variables/Variables.scss";
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    background: #05010d;
+    
+    
+    .top-left-glow, .top-right-glow {
+
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        filter: blur(8rem);
+        top: 0;
+
+    }
+
+    .top-left-glow {
+        background: $primary-blue;
+        left: 0;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .top-right-glow {
+        background: $primary-purple;
+        right: 0;
+        transform: translateX(50%) translateY(-50%);
+    }
+    .signup-container {
+        background: rgba(255,255,255,.1);
+        padding: 50px;
+        border-radius: 30px;
+        width: 70%;
+        color: #fff;
+
+        .header-container {
+            margin-bottom: 25px;
+
+            .header {
+                font-size: 3rem;
+                
+                
+            }
+
+            .subheader {
+                opacity: .9;
+            }
+
+            .paragraph {
+                font-size: 1rem;
+                opacity: .7;
+                letter-spacing: 2px;
+                color: rgba(255,255,255,.4);
+                font-weight: 400;
+            }
+
+            .header, .subheader, .paragraph {
+                margin: 10px 5px;
+            }
+
+
+        }
+
+
+        .google-container {
+            margin-top: 40px;
+            padding: 20px;
+            
+            
+            .google-content {
+
+                border-radius: 30px;
+                background: $light-blue;
+                padding: 0 15px;
+                box-shadow: 0 0 .1em $blackColor;
+                
+                cursor: pointer;
+                img, h3 {
+                    margin: 5px;
+                }
+
+                img {
+                    width: 40px;
+                }
+
+                .btn-text {
+                    letter-spacing: 1px;
+                }
+
+                &:hover {
+                    scale: 1.1;
+                    box-shadow: 0 0 2.5em $light-blue;
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .page-container {
+
+        .top-left-glow, .top-right-glow {
+            filter: blur(12rem);
+        }
+        .signup-container {
+            width: 40%;
+        }
+    }
+    
+}

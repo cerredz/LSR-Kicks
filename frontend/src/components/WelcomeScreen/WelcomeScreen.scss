@@ -1,0 +1,505 @@
+@import "../Variables/Variables.scss";
+
+
+
+
+.welcome-container {
+    scroll-behavior: smooth;
+    position: relative;
+    padding: 25px;
+    color: #fff;
+    background: #05010d;
+    min-height: 100vh;
+    display: flex;
+    overflow: hidden;
+
+    .welcome-content {
+        width: 100%;
+        margin: 0 auto;
+
+        .welcome-title {
+            
+            flex-direction: column;
+            position: relative;
+            margin-top: 125px;
+
+            
+
+            .header-text {
+                font-size: min(6rem, 10vw );
+                text-align: center;
+                z-index: 1;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .span {
+                font-style: italic;
+                background: linear-gradient(to right, $primary-blue, #7a06d9);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 600;
+            }
+
+            .subheader-text {
+                text-align: center;
+                color: rgba(255,255,255,.5);
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+                z-index: 1;
+                width: 80%;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0%;
+                bottom: 20%;
+                left: 30%;
+                width: 40%;
+                background: linear-gradient(to right, $primary-blue, #7a06d9);
+                filter: blur(8rem);
+            }
+        }
+
+
+        .brands-container {
+            flex-direction: column;
+            margin: 10px auto;
+            
+            
+            //hover effects for the brand cards
+            .Nike, .Jordan, .Yeezy{
+
+                &:hover {
+                    
+                    &::before {
+                        right: 0;
+                        transition: .5s ease-in-out;
+                    }
+
+                    
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: calc(100% - 5px);
+                    left: 0;
+                    right: 100%;
+                    height: 5px;
+                    transition: .5s ease-in-out;
+                    
+                    filter: blur(1.5rem)
+                }
+            }
+
+            //change the colors for each of the brands
+            .Nike {
+                &:hover {
+                    .brand-title {
+                        .header-text {
+                            color: $primary-blue;
+                        }
+                    }
+
+                    
+                }
+
+                &::before {
+                    background: $primary-blue;
+                }
+            }
+
+            .Jordan {
+                &:hover {
+                    .brand-title {
+                        .header-text {
+                            color: rgb(192, 89, 195);
+                        }
+                    }
+                }
+
+                &::before {
+                    background: rgb(192, 89, 195);
+                }
+            }
+
+            .Yeezy {
+                &:hover {
+                    .brand-title {
+                        .header-text {
+                            color: #7a06d9;
+                        }
+                    }
+                }
+
+                &::before {
+                    background: #7a06d9;
+                }
+            }
+
+
+            .brand {
+                margin: 20px auto;
+                display: grid;
+                grid-template-columns: 1fr .5fr .5fr ;
+                background: #1E1B26;
+                border-radius: 30px;
+                gap: 25px;
+                height: 150px;
+                position: relative;
+                overflow: hidden;
+                
+
+                .open {
+                    width: 250px;
+                    transition: none;
+                    
+                }
+                .brand-title {
+                    padding: 20px 20px;
+                    width: 200px;
+                    text-align: center;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                    flex-direction: column;
+                    transition: .1s ease-in-out;
+                    
+                    .header-text {
+                        border-bottom: 1px solid rgba(255,255,255,.2);
+                    }
+                    .paragraph-text {
+                        color: rgba(255,255,255,.4);
+                        font-size: .8rem;
+                        margin-top: 5px;
+                        font-style: italic;
+                        letter-spacing: 1px;
+                    
+                        
+                    }
+                }
+
+                .brand-shoe {
+                    
+                
+                    .nike {
+                        width: 120px;
+                        height: 150px;
+                    }
+
+                    .jordan {
+                        width: 120px;
+                        height: 90px;
+                    }
+
+                    .yeezy {
+                        width: 110px;
+                        height: 90px;
+                    }
+                }
+
+                .brand-arrow {
+                    font-size: 3rem;
+                    background: rgba(255,255,255,.05);
+                    border-top-right-radius: 30px;
+                    border-bottom-right-radius: 30px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    position: relative;
+
+                    
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        width: 0;
+                        transition: .25s ease-in-out;
+                        background: rgba(255,255,255,.25);
+                    }
+                    &:hover {
+                        
+                        
+                        svg {
+                            transform: translateX(5px);
+                        }
+
+                        &::before {
+                            width: 100%;
+                            transition: .25s ease-in-out;
+                        }
+                    }
+                    
+
+                }
+
+
+            }
+
+            
+            .caurosel-container {
+                background: rgba(255,255,255,.05);
+                width: 400px;
+                margin-top: -20px;
+                padding: 5px 10px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                transition: .1s ease-in;
+                overflow-x: hidden;
+
+                .shoes-slideshow {
+
+                    display: flex;
+                    
+                    gap: 25px;
+                    padding: 5px 1rem;
+                    animation: caurosel 38s linear infinite;
+                    
+                    @keyframes caurosel {
+                        0% {
+                            transform: translateX(0%);
+                        }
+                    
+                        100% {
+                            transform: translateX(calc(-100% + 300px));
+                        }
+                    
+                        
+                    }
+
+                    .shoe {
+                        flex-direction: column;
+                        background: rgba(255,255,255,.1);
+                        width: min-content;
+                        padding: 5px 10px;
+                        margin: 10px 0;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        
+                        .paragraph-text {
+                            text-align: center;
+                            font-size: .8rem;
+                            letter-spacing: 1px;
+                        }
+
+                        .price {
+                            letter-spacing: 2px;
+                        }
+
+                        &:hover {
+                            scale: 1.1;
+                            background: rgba(255,255,255,.2);
+                        }
+
+                        
+                    }
+
+                    .nike {
+                        img {
+                            width: 75px;
+                            height: 85px;
+                        }
+                    }
+
+                    .jordan {
+                        img {
+                            width: 75px;
+                            height: 70px;
+                        }
+                    }
+
+                    .yeezy {
+                        img {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+
+                    
+                }
+
+                
+
+
+                .btn-container {
+
+                    .btn-shop {
+                        border-radius: 30px;
+                        border: none;
+                        margin: 10px auto;
+                        cursor: pointer;
+                        font-size: 1.1rem;
+                        letter-spacing: 2px;
+                        font-weight: 500;
+                        color: rgba(255,255,255,.4);
+                        background: rgba(0,0,0,.8);
+                        box-shadow: 0 0 4rem rgba(255,255,255,.1);
+                        position: relative;
+                        transition: .3s ease-in-out;
+                        overflow: hidden;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            border-radius: inherit;
+                            top: 0;
+                            left: -10%;
+                            bottom: 0;
+                            width: 0;
+                            background: linear-gradient(to right, rgba(255,255,255,.2), transparent);
+                            transition: .3s ease-in-out;
+                            transform: skew(45deg);
+                        }
+
+                        &:hover {
+                            scale: 1.1;
+                            color: rgba(255,255,255,.6);
+                            box-shadow: 0 0 3rem rgba(255,255,255,.2);
+                            &::before {
+                                width: 100%;
+                           }
+                        }
+                    }
+
+                    
+                }
+
+                
+            }   
+        }
+        
+    }
+    
+
+}
+
+@media (min-width: 1000px) {
+    
+
+    .welcome-container {
+
+        
+
+        .welcome-content {
+
+            .welcome-title {
+
+
+                .subheader-text {
+                    width: 60%;
+                }
+            }
+
+
+            .brands-container {
+
+                .brand {
+
+
+                    .brand-title {
+                        
+
+                    }
+
+                    .open {
+                        width: 350px;
+                        transition: .1s ease-in-out;
+                        
+                        
+                    }
+                }
+
+                .caurosel-container {
+                    
+                }
+
+                .caurosel-open {
+                    width: 600px;
+                    
+                    transition: .1s ease-in-out;
+
+                }
+
+                
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    
+
+    .welcome-container {
+
+        .bottom-left-glow {
+            display: none;
+        }
+
+        padding: 0;
+        margin: 0;
+        .welcome-content {
+            margin: 0 auto;
+            width: 100%;
+            .welcome-title {
+
+
+                .glow {
+                    height: 0;
+                    width: 0;
+                }
+                .subheader-text {
+                    scale: .9;
+                }
+
+                .header-text {
+                    font-size: 3rem
+                }
+            }
+
+            .brands-container {
+                width: 100%;
+                
+                margin: 25px 0;
+                
+
+                .brand {
+                    scale: .8;
+                    margin: 0;
+                    grid-template-columns: 1fr .5fr 1fr;
+                    
+                    .brand-shoe {
+
+                        .jordan {
+                            scale: .9;
+                        }
+                    }
+
+                    
+                }
+
+                .caurosel-container {
+                    width: 300px;
+                    
+                }
+
+                
+                &::before {
+                    position: absolute;
+                    content: '';
+                    bottom: 100px;
+                    left: 0;
+                    right: 0;
+                    height: 5px;
+                    background: $primary-blue;
+                    border-radius: 50%;
+                    filter: blur(.5rem);
+                    
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,666 @@
+@import "../Variables/Variables.scss";
+
+
+nav {
+
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(2px);
+
+    
+    
+
+
+    z-index: 2;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 100%;
+        width: 100%;
+        transition: .25s ease-in-out;
+        background: rgba(255,255,255,.1);
+        z-index: -1;
+        
+    }
+
+    &:hover::before{
+        bottom: 0;
+        transition: .25s ease-in-out;
+    }
+
+   
+    .logo-container, .toggle-container, .icon-container {
+        padding: 1.5rem 2rem;
+    }
+
+    .logo-container {
+        
+        display: flex;
+        align-items: center;
+
+        .logo {
+            position: absolute;
+            width: 300px;
+            margin-top: 10px;
+            left: 0;
+            filter: invert(100%);
+            cursor: pointer;
+            
+        }
+
+        
+        
+    }
+
+    .categories-container {
+        
+        transform: translateY(-500%);
+        position: absolute;
+        margin: 10px auto;
+        width: 100%;
+        
+        ul {
+            display: grid;
+            place-items: center;
+            
+            width: 300px;
+            margin: 10px auto;
+            border-radius: 40px;
+            overflow: hidden;
+            background: black;
+            color: rgba(255,255,255,.4);
+            box-shadow: 0 0 2rem rgba(255,255,255,.1);
+        
+            li {
+                width: 100%;
+                text-align: center;
+                padding: .75rem 2rem;
+                opacity: 1;
+                
+                font-size: 1.3rem;
+                
+
+                &:nth-child(1) {
+                    padding-top: 1.5rem;
+                }
+
+                &:nth-child(5) {
+                    padding-bottom: 1.5rem;
+                }
+
+                &:hover {
+                    color: #fff;
+                    letter-spacing: 3px;
+                    
+                }
+            } 
+
+            
+            
+        }
+
+        .sign-in-container {
+            width: 100%;
+            left: 0;
+
+            .sign-in {
+                margin-top: 50px;
+                cursor: pointer;
+                background: $primary-blue;
+                border: 2px transparent;
+                &:hover {
+                    transform: translateY(-10px) scale(1.1);
+                    letter-spacing: 3px;
+                }
+            }
+            
+        }
+
+        
+    }
+
+    .down {
+        transform: translateY(100%);
+    }
+    .icon-container {
+        display: flex;
+        
+        ul {
+            li {
+                z-index: 5;
+                
+            }
+        }
+        svg {
+            font-size: 2rem;
+            margin: 0 10px;
+            font-weight: 100;
+            display: none;
+            color: #fff;
+            
+        }
+
+        .sign-in {
+            position: relative;
+            white-space: nowrap;
+            cursor: pointer;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px auto;
+
+            background: $blackColor;
+            color: $darkerWhite;
+            
+            
+            
+        
+
+            &:hover {
+                
+                background: white;
+                color: $blackColor;
+                box-shadow: 0 0 1rem $light-grey;
+                scale: 1.1;
+            }
+
+        }
+
+        .sign-in-nav {
+            display: none;
+        }
+    }
+    .icon-container-hide {
+        display: none;
+    }
+
+    .toggle-container {
+
+        display: flex;
+        align-items: center;
+        svg {
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: #fff
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            svg {
+                margin: 0 10px;  
+            }
+
+        }
+    }
+
+    .toggle-container-hide {
+        display: none;
+    }
+    
+
+    li {
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    
+}
+
+.bag-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #fff;
+    width: 45%;
+    background: rgba(0,0,0, .8);
+    box-shadow: 0 0 5rem rgba(255,255,255,.1);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    padding: 25px;
+    z-index: 2;
+    
+
+    .bag-header {
+        justify-content: space-between;
+        margin-bottom: 25px;
+        
+        .header-text, svg {
+            margin-left: 1rem; 
+            margin-top: .5rem;
+            
+        }
+
+        svg {
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+    
+    }
+
+    .bag-content {
+        flex-direction: column;
+        height: 69vh;
+        max-height: 69vh;
+        overflow: auto;
+
+        .quantity-error-container {
+            text-align: center;
+            border-top: 3px solid $primary-red;
+            border-bottom: 3px solid $primary-red;
+            padding: 10px;
+            position: relative;
+            text-shadow: 0 0 .05rem $blackColor;
+            letter-spacing: 2px;
+            
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $primary-red;
+                opacity: .3;
+            }
+
+            .paragraph-text {
+                font-size: .9rem;
+                line-height: 1.1rem;
+            }
+        }
+
+        .shoe-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 10px;
+            gap: 10px;
+
+            .shoe-image {
+                width: 140px;
+                height: 85px;
+                background: rgba(255,255,255,.2);
+                border-radius: 15px;
+                margin-right: 10px;
+                img {
+                    width: 60%;
+                    height: 55%;
+                }
+
+                .nike {
+                    width: 60%;
+                    height: 80%;
+                }
+
+                .jordan {
+                    width: 65%;
+                    height: 60%;
+                }
+            }
+
+            .shoe-info {
+                width: 100%;
+                
+                height: 75px;
+                .header-text {
+                    font-size: 1rem;
+                    text-shadow: 0 0 .05rem black;
+                    width: 60%;
+                    display: inline-block;
+                }
+
+                .paragraph-text {
+                    font-size: .9rem;
+                    letter-spacing: 2px;
+                    font-weight: 300;
+                    color: rgba(255,255,255,.5);
+                    &.first {
+                        display: inline-block;
+                        text-align: right;
+                        width: 40%;
+                    }
+                }
+                svg {
+                    color: rgba(255,255,255,.5);
+
+                }
+
+                .quantity-container {
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        margin: 5px;
+                        cursor: pointer;
+                                            color: rgba(255,255,255,.5);
+
+                    }
+
+                    .right {
+                        width: 90%;
+                        justify-content: space-between;
+                        .remove {
+                            margin-left: 20px;
+                            text-decoration: underline;
+                            font-size: .8rem;
+                            letter-spacing: 2px;
+                            font-style: italic;
+                            cursor: pointer;
+                        }
+
+                        .shoe-category {
+                            font-size: .9rem;
+                        }
+                    }
+                    
+                }
+
+                
+            }
+        }
+    }
+
+    .bag-checkout {
+        flex-direction: column;
+        
+        
+        .btn-paypal, .total, .btn-stripe {
+            
+            width: 80%;
+            margin: 7px;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 10px;
+            
+            .header-text {
+                font-size: 1.2rem;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 0;
+                background: rgba(0,0,0, .3);
+                transition: .3s ease-in-out;
+               }
+    
+               &:hover {
+                &::before {
+                    transition: .3s ease-in-out;
+                    height: 100%;
+                }
+               }
+        }
+
+        .btn-paypal {
+           background: #FFCC00;
+           position: relative;
+
+
+            img {
+                width: 25px;
+                margin: 0 5px;
+            }
+            .header-text {  
+                
+                font-size: 1.3rem;
+
+                .pay,.pal {
+                    font-style: italic;
+                    letter-spacing: 1px;
+                }
+
+                .pay {
+                    color: #002987;
+                    text-shadow: 0 0 .05rem #002987 ;
+                    
+                }
+
+                .pal {
+                    color: #0085CC;
+                    text-shadow: 0 0 .05rem #0085CC ;
+                }
+            }
+
+
+            
+
+           
+
+        }
+
+        .total {
+            background: rgba(255,255,255,.15);
+            color: white;
+            text-align: center;
+
+            &:hover {
+                box-shadow: 0 0 3rem rgba(255,255,255,.1);
+            }
+
+            
+
+            
+        }
+
+        .btn-stripe {
+
+            position: relative;
+            overflow: hidden;
+            color: black;
+            img {
+                width: 25px;
+                margin: 0 5px;
+                transform: skew(-15deg);
+            }
+
+            
+            &::after {
+                position: absolute;
+                content: '';
+                inset: 0;
+                background: #626CD9;
+                z-index: -1;
+                
+
+            }
+
+           
+
+            .subheader-text {
+                font-style: italic;
+                font-weight: 700;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+            }
+        }
+
+        
+        
+    }
+
+}
+
+//have icons at two different points of the code in two different divs, easier to just target them like this
+.svg-icons {
+    opacity: .8;
+    &:hover {
+        opacity: 1;
+        scale: 1.1;
+        
+        
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        scale: 1;
+        
+    }
+
+    50% {
+        scale: 1.2;
+        
+    }
+}
+.hasItems {
+    animation: bounce 2s ease-in-out infinite;
+    transition: .2s ease-in-out;
+    position: relative;
+    
+}
+
+@media (max-width: 1300px) {
+    nav {
+        .logo-container {
+            .logo {
+                width: 200px;
+            }
+        }
+
+        .categories-container {
+            ul {
+                .header-text {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1150px) {
+
+    nav {
+
+        background: transparent;
+        .logo-container {
+            h3 {
+                white-space: nowrap;
+            }
+        }
+
+        .categories-container {
+            transform: translateY(0);
+            position: relative;
+            display: flex;
+            padding: 0;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            left: 100px;
+            
+
+            ul {
+                display: flex;
+                box-shadow: none;
+                border: none;
+                overflow: visible;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+                margin: 0;
+                background: transparent;
+                
+                
+                li {
+                    position: relative;
+                    padding: 0;
+                    margin: 0 25px;
+                    opacity: 1;
+                    color: rgba(255,255,255,.65);
+                    
+                    &:nth-child(1) {
+                        padding-top: 0;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                    }
+
+                    
+
+
+                }
+
+                #about, #contact {
+
+                    display: none;
+                }
+
+                
+            }
+
+        }
+
+        
+
+        .icon-container {
+            display: flex;
+            
+            svg {
+                font-size: 2.3rem;
+                margin: 1rem;
+                font-weight: 100;
+                display: block;
+            }
+
+            .sign-in-nav {
+                display: block;
+                font-size: 1.3rem;
+                border: 2px solid transparent;
+                background: $primary-blue;
+                position: relative;
+                overflow: visible;
+                
+
+                &::before {
+
+                    position: absolute;
+                    content: '';
+                    background: $primary-blue;
+                    inset: 0;
+                    
+                    filter: blur(2rem);
+                }
+                &:hover {
+                    background: $primary-blue;
+                    box-shadow: none;
+                }
+
+
+            }
+
+            
+        }
+
+        .toggle-container{
+            display: none;
+        }
+        .logo-container, .toggle-container, .icon-container {
+            padding: 1rem 2rem;
+        }
+    }
+
+    .bag-container {
+        width: 25%;
+    }
+}
+
+
+@media (max-width: 700px) {
+    
+
+    .bag-container {
+        width: 100%;
+        padding: 1rem 0;
+        
+    }
+}

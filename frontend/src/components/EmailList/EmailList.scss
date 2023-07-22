@@ -1,0 +1,180 @@
+@import "../Variables/Variables.scss";
+
+
+
+.email-container {
+    color: #fff;
+    width: 80%;
+    margin: 50px auto;
+    
+    
+    
+
+    .email-content{
+        padding: 25px 35px;
+        background-color: #1E1A25;
+        border: 3px solid $primary-blue;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        
+        
+
+        
+        
+        
+        &::before, &::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+            
+            
+            
+            
+
+        }
+
+        &::before {
+            background: $primary-blue;
+            opacity: .15; 
+        }
+
+        &::after {
+            
+            box-shadow: 0 0 2rem $primary-blue;
+            opacity: 1;
+        }
+
+        .paragraph-text {
+            letter-spacing: 2px;
+            color: rgba(255,255,255,.4);
+        }
+
+        .text {
+            width: 80%;
+
+            h1, p {
+                margin: 5px;
+            }
+
+            input {
+                margin: 10px;
+                background: transparent;
+                border: none;
+                border-bottom: 2px solid $primary-blue;
+                outline: none;
+                color: #fff;
+                letter-spacing: 2px;
+                padding: 5px;
+            }
+
+            svg {
+                cursor: pointer;
+                font-size: 1.3rem;
+                margin-left: 10px;
+            }
+
+            .form {
+                flex-direction: column;
+                button {
+                    margin-top: 10px;
+                    font-size: .8rem;
+                    padding: 7px 25px;
+                }
+            }
+
+            .error {
+                color: $primary-red;
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+        }
+
+        button {
+            cursor: pointer;
+            background: $primary-blue;
+            letter-spacing: 2px;
+            color: #fff;
+            border: none;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+            padding: 10px 25px;
+            box-shadow: 0 0 4rem rgba(255,255,255,.1);
+            
+
+            svg {
+                font-size: 1.1rem;
+                transition: .2s ease-in-out;
+
+            }
+
+            &:hover {
+                svg {
+                    transform: translateX(3px);
+                    transition: .2s ease-in-out;
+                }
+
+                &::before {
+                    width: 100%;
+                    transition: .4s ease-in-out;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                background: linear-gradient(to right, rgba(255,255,255,.2), transparent);
+                transform: rotate(15deg);
+                filter: blur(1rem);
+                border-radius: inherit;
+                transition: .4s ease-in-out;
+            }
+        }
+        
+
+    }
+}
+
+
+
+
+@media (min-width: 1000px) {
+    
+    .email-container {
+        
+        .email-content {
+
+            justify-content: space-between;
+            flex-direction: row;
+            text-align: left;
+
+            .text {
+                width: 65%;
+
+                .form {
+                    flex-direction: row;
+                    gap: 15px;
+                    
+                    justify-content: flex-start;
+                }
+
+            }
+
+            
+
+            
+        }
+    }
+}

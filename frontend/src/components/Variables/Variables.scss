@@ -1,0 +1,86 @@
+
+$yellowColor: #FFD95A;
+$primary-red: #CD1818;
+
+$primary-background: #05010d;
+
+$blackColor: #000000;
+$lightBlack: #454545;
+$light-grey: #9DB2BF;
+$darkerWhite: #EEEEEE;
+$lightDarkerWhite: #f5f4f4;
+
+$primary-blue: #1327de;
+$light-blue: #00C4FF;
+
+$primary-purple: #7a06d9;
+$primary-pink: #FF2171;
+
+
+
+
+//@font-face {
+//   font-family: Main;
+//    src: url("../Fonts/Autobusbold-1ynL.ttf") format('truetype');
+//}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: .5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide {
+    display: none;
+}
+
+.header-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 2px; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.subheader-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.paragraph-text {
+    font-size: .9rem;
+    word-spacing: 2px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+button {
+    padding: 5px 20px;
+    border-radius: 30px;
+    background: transparent;
+}
+
+.link-text {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+

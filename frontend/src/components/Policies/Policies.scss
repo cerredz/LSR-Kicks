@@ -1,0 +1,98 @@
+@import "../Variables/Variables.scss";
+
+.policies-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    .policies-title {
+        width: 80%;
+        margin: 40px auto;
+        text-align: center;
+
+        .header-text {
+            font-size: min(10vw, 3rem);
+            position: relative;
+            font-weight: 700;
+            letter-spacing: 3px;
+            
+
+            
+                    
+            &::before {
+                    position: absolute;
+                    content: '';
+                    inset: .5rem;
+                    filter: blur(5rem);
+                    background: linear-gradient(to right, $primary-purple, $primary-pink);
+                }
+        }
+
+        .paragraph-text {
+            color: rgba(255,255,255,.4);
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: .9rem;
+            margin-top: 10px;
+        }
+    }
+
+    .policies-content {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        .section-content {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            background: rgba(255,255,255,.05);
+            overflow: auto;
+            gap: 25px;
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: 25px;
+
+            .section {
+                text-align: center;
+
+                .header-text {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .policies {
+
+                
+                li {
+                    
+                    color: rgba(255,255,255,.4);
+                    .paragraph-text {
+                        letter-spacing: 2px;
+                        font-size: .8rem;
+                        font-weight: 400;
+                    }
+                    
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+
+    .policies-container {
+
+        .policies-content {
+
+            .section-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 50px;
+            }
+        }
+    }
+}
+

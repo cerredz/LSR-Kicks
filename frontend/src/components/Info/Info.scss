@@ -1,0 +1,230 @@
+@import "../Variables/Variables.scss";
+
+
+.info-container {
+
+    
+    background: #05010d;
+    color: #fff;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 75px;
+
+
+    .info-title {
+        margin: 50px 0;
+        flex-direction: column;
+        text-align: center;
+        font-weight: 800;
+        position: relative;
+        
+
+        
+        .header-text {
+            font-size: min(4.5rem, 10vw );
+        }
+
+        
+        //linear gradient text in the heading
+        span {
+            background: linear-gradient(to right, #7a06d9, #FF2171); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-style: italic;
+            position: relative;
+            text-shadow: 0 0 7rem #FF2171;
+        }   
+
+        .subheader-text {
+            
+            color: rgba(255,255,255,.5);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            z-index: 1;
+            width: 80%;
+        }
+    }
+
+    .info-content {
+        
+        flex-wrap: wrap;
+        width: 85%;
+        margin: 0 auto;
+        
+        //hover effects for each of the 3 cards, need different color for each of them
+        .faq {
+
+            &:hover {
+
+                .header-text {
+                    color:  #8404CE;
+                    
+                }
+                border: 2px solid #8404CE;
+                box-shadow: 0 0 1.5rem #8404CE;
+                transition: .2s linear;
+                
+            }
+        }
+
+        .policies {
+            &:hover {
+
+                .header-text {
+                    color:  #B20BA6;
+                    
+                }
+                border: 2px solid #B20BA6;
+                box-shadow: 0 0 1.5rem #B20BA6;
+                transition: .2s linear;
+            }
+
+        }
+
+        .about-us {
+            &:hover {
+
+                .header-text {
+                    color:  #F31B76;
+                    
+                }
+                border: 2px solid #F31B76;
+                box-shadow: 0 0 1.5rem #F31B76;
+                transition: .2s linear;
+            }
+
+        }
+        
+        .info-card {
+            margin: 20px;
+            background: rgb(30,27,38);
+            border: 2px solid rgb(30,27,38);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 300px;
+            position: relative;
+            box-shadow: 0 0 1rem rgba(255,255,255,.15);
+            cursor: pointer;
+            
+
+
+            .title-container {
+                padding: .25rem .5rem;
+                justify-content: space-between;
+                .header-text {
+                    letter-spacing: 3px;
+                    font-weight: 700;
+                }
+                .question-mark, .about-us {
+                    filter: invert(35%);
+                }
+                img {
+                    width: 35px;
+                }
+
+                
+
+                
+
+            }
+
+            hr {
+                background: rgba(255,255,255,.1);
+                border: none;
+                height: 2px;
+                margin-bottom: 5px;
+            }
+
+            .subheader-text {
+                width: 80%;
+                margin: 10px auto;
+                color: rgba(255,255,255,.5);
+                font-style: italic;
+                letter-spacing: 2px;
+                font-size: .9rem;
+                line-height: 2;
+                text-align: center;
+            }
+            position: relative;
+
+            .btn-container {
+                border-radius: 5px;
+                padding: 5px 10px;
+                cursor: pointer;
+                position: relative;
+                margin: 15px auto;
+                width: 60%;
+
+
+                button {
+                    color: white;
+                    border: none;
+                    font-size: .8rem;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    text-align: center;
+                    
+
+                }
+
+                svg {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    background: rgba(0,0,0,.2);
+                    border-radius: inherit;
+                    transition: .5s ease-in-out;
+                }
+
+                &:hover {
+
+                    &::before {
+                        width: 100%;
+                        transition: .5s ease-in-out;
+                    }
+
+                    svg {
+                        transform: translateX(5px);
+                    }
+                }
+
+                
+            }
+
+            .btn-faq {
+                background: #8404CE;
+            }
+
+            .btn-policies {
+                background: #B20BA6;
+            }
+
+            .btn-about-us {
+                background: #F31B76;
+            }
+        }
+
+        
+    }
+}
+
+
+@media (max-width: 600px) {
+    .info-container {
+        padding-top: none;
+
+        .info-title {
+            margin-top: -25px;
+        }
+
+
+    }
+}

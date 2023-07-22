@@ -1,0 +1,393 @@
+@import "../Variables/Variables.scss";
+
+
+.products-container {
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 125px;
+    
+    hr {
+        margin: 50px 0;
+        border: none;
+        height: 3px;
+        background: rgba(255,255,255,.4);
+        
+    }
+    .product-names {
+
+        justify-content: flex-start;
+        gap: 25px;
+        flex-wrap: wrap;
+        position: relative;
+        margin-top: 50px;
+
+
+        .product-name {
+            cursor: pointer;
+            gap: 10px;
+
+            h1 {
+                color: rgba(255,255,255,.4);
+                font-size: 1.3rem;
+            }
+
+            .active {
+                color: #fff ;
+            }
+
+            svg {
+                font-size: 1.5rem;
+                font-weight: bolder;
+            }
+        }
+
+        .arrows {
+            position: absolute;
+            right: 10px;
+            display: flex;
+
+            svg {
+                margin: 0 5px;
+                font-size: 1.5rem;
+                cursor: pointer;
+                padding: 5px;
+                
+                text-align: center;
+
+                &:hover {
+                    background: rgba(255,255,255,.1);
+                    
+                }
+            }
+        }
+
+        
+    }
+
+    .products {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        
+
+        &::-webkit-scrollbar {
+            
+            display: none;
+          }
+        
+          &::-webkit-scrollbar-thumb {
+            display: none;
+          }
+
+        .shoe-container {
+            
+            margin: 10px 5px;
+            padding: 10px;
+            flex-direction: column;
+            display: inline-block;
+            white-space: normal;
+            text-align: center;
+            
+
+            .shoe-image {
+                width: 225px;
+                height: 175px;
+                background: rgba(255,255,255,.1);
+                border-radius: 5px;
+                position: relative;
+                border: 2px solid transparent;
+                cursor: pointer;
+                img {
+                    width: 75%;
+                }
+
+                .price-text{
+                    position: absolute;
+                    bottom: -2px;
+                    font-size: .9rem;
+                    letter-spacing: 2px;
+                    background:#05010d;
+                    padding-top: 3px;
+                    padding-left: 7px;
+                    padding-right: 7px;
+                }
+
+                
+            }
+
+            .subheader-text {
+                font-size: 1rem;
+                letter-spacing: 2px;
+                margin-top: 5px;
+
+            }
+
+            .paragraph-text {
+                letter-spacing: 2px;
+                font-size: .8rem;
+                color: rgba(255,255,255,.4);
+            }
+
+            &:hover {
+                .shoe-image {
+                    border-color: #fff;
+                }
+
+                .price-text {
+                    transform: translateY(-5px);
+                }
+
+                img {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+        
+    }
+
+    .banners-container {
+        margin-top: 75px;
+        padding-bottom: 25px;
+        flex-wrap: wrap;
+        gap: 35px;
+
+        .banner {
+            flex-direction: column;
+            width: 300px;
+            text-align: center;
+            position: relative;
+            background: rgba(255,255,255,.1);
+            border-radius: 30px;
+            flex-wrap: wrap;
+            cursor: pointer;
+
+            .banner-img {
+
+                width: 100%;
+                height: 250px;
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .new-arrival{
+                background-image: url("../Assets/nikeAiGenerated.jpg");
+            }
+
+            .best-seller {
+                background-image: url("../Assets/ultraboostai.jpg");
+            }
+
+            .our-favorite{ 
+                background-image: url("../Assets/yeezyai.png");
+            }
+
+            .banner-text {
+                padding: 25px;
+
+                .header-text {
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                    letter-spacing: 3px;
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        inset: 0;
+                        filter: blur(2rem);
+                        opacity: .4;
+                    }
+                }
+
+                
+                .new {
+                    
+                    &::before {
+                        background: linear-gradient(to right, aqua, $primary-blue);
+                    }
+                }   
+
+                .best {
+                    
+                    &::before {
+                        background: linear-gradient(to right, $primary-blue, $primary-purple);
+                    }
+                }
+
+                .favorites {
+                    
+                    &::before {
+                        background: linear-gradient(to right, $primary-purple, $primary-pink);
+                    }
+                }
+
+                
+
+                .paragraph-text {
+                    letter-spacing: 2px;
+                    color: rgba(255,255,255,.4);
+                    font-weight: 300;
+                    font-size: .8rem;
+                    margin: 5px ;
+                }
+
+                button {
+                    margin: 15px auto;
+                    margin-bottom: 0;
+                    cursor: pointer;
+                    color: #fff;
+                    border: none;
+                    padding: 7px 20px;
+                    letter-spacing: 2px;
+                    font-style: italic;
+                    background: rgba(0,0,0,.5);
+                    border-radius: 2px;
+                    box-shadow: 0 0 3rem rgba(255,255,255,.1);
+                    gap: 10px;
+                    position: relative;
+                    overflow: hidden;
+
+                    svg {
+                        font-size: 1.1rem;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        bottom: 0;
+                        left: -10%;
+                        width: 0;
+                        filter: blur(1rem);
+                        transition: .4s ease-in-out;
+                        
+
+
+                    }
+
+                    &:hover {
+                        svg {
+                            transform: translateX(3px);
+                        }
+
+                        &::before {
+                            width: 110%;
+                            transition: .4s ease-in-out;
+                        }
+                    }
+                }
+
+                .btn-new-arrival {
+
+                    
+                    &::before {
+                        background: linear-gradient(to right, aqua, $primary-blue, transparent);
+                        opacity: .4;
+                    }
+                }
+
+                .btn-best-seller {
+
+                    &::before {
+                        background: linear-gradient(to right, $primary-blue, $primary-purple, transparent);
+                        opacity: .4;
+                    }
+                }
+
+                .btn-our-favorite {
+
+                    &::before {
+                        background: linear-gradient(to right, $primary-purple, $primary-pink, transparent);
+                        opacity: .4;
+                    }
+                }
+
+               
+            }
+        }
+
+        
+    }
+}
+
+
+@media (min-width: 1000px) {
+    
+    .products-container {
+
+        .product-names {
+
+            .product-name {
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                svg {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .banners-container {
+            
+            .banner {
+                width: 350px;
+
+                .banner-img {
+                    height: 300px;
+                }
+
+                .banner-text {
+
+                    .header-text {
+                        font-size: 2.1rem;
+                        
+                    }
+
+                    .paragraph-text {
+                        font-size: .9rem;
+                    }
+
+                    button {
+                        font-size: 1rem;
+                        svg {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+
+    .products-container {
+
+        .product-names {
+
+            .arrows {
+                display: none;
+            }
+        }
+
+        .products {
+
+            &::-webkit-scrollbar {
+                background-color: #fff;
+                display: block;
+              }
+            
+              &::-webkit-scrollbar-thumb {
+                background-color: grey;
+                display: block;
+              }
+        }
+    }
+}

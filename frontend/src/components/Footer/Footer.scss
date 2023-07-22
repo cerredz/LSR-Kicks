@@ -1,0 +1,191 @@
+@import "../Variables/Variables.scss";
+
+.footer-container {
+    background: #1E1B26;
+    margin-top: 50px;
+    padding: 50px 0;
+    
+
+    .footer-content, .footer-legal {
+        width: 80%;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        
+    }
+
+    .footer-content {
+        
+        flex-direction: column;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    
+        .footer-card {
+            flex-direction: column;
+            text-align: center;
+            
+            
+            .subheader-text {
+                font-size: 1.3rem;
+                letter-spacing: 2px;
+                color: rgba(255,255,255,.9);
+                font-weight: 600;
+                
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                list-style-type: none;
+                li {
+                    margin: 8px 0;
+                    cursor: pointer;
+                    .paragraph-text {
+                        font-size: 1rem;
+                        letter-spacing: 2px;
+                        color: rgba(255,255,255,.2);
+                        font-weight: 400;
+                    }
+
+                    &:hover {
+                        .paragraph-text {
+                            color: rgba(255,255,255,.9);
+                        }
+                    }
+
+                    
+                }
+            }
+
+           
+
+
+
+            
+        }
+
+    }
+
+    .footer-legal {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+
+        .social-media {
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                svg {
+                
+                    margin: 0px 10px;
+                    font-size: 2rem;
+                    padding: 5px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    position: relative;   
+                    transform: translateY(0);
+                }
+    
+                .youtube {
+                    
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 0 3rem $primary-red,
+                                    inset 0 0 2rem $primary-red;
+                        
+                    }
+                }
+    
+                .instagram {
+                    
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 0 3rem #DE345A,
+                                    inset 0 0 2rem #DE345A;
+                    }
+                }
+    
+                .twitter {
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 0 3rem #1C9CEA,
+                                    inset 0 0 2rem #1C9CEA;
+                    }
+    
+                }
+    
+                .snapchat {
+                    &:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 0 3rem #F7F400,
+                                    inset 0 0 2rem #F7F400;
+                    }
+                }
+            }
+            
+        }
+
+        .paragraph-text {
+            color: rgba(255,255,255,.4);
+            letter-spacing: 2px;
+            margin: 5px;
+        }
+        
+
+        .payment-methods {
+            gap: 10px;
+            img {
+                width: 40px;
+            }
+
+            .apple, .google, .paypal {
+                background: #fff;
+                padding: 0 7px;
+                border-radius: 5px;
+                width: 27px;
+            }
+
+            
+        }
+    }
+
+
+}
+
+
+@media (min-width: 1000px) {
+    .footer-container {
+
+        .footer-content {
+            
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 50px;
+            .footer-card {
+                text-align: left;
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 1400px) {
+    .footer-container {
+
+        .footer-content {
+            
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 100px;
+            .footer-card {
+                text-align: left;
+            }
+        }
+    }
+}

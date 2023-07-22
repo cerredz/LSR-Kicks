@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
+}
+
+.header-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subheader-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+.paragraph-text {
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 30px;
+  background: transparent;
+}
+
+.link-text {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-container {
+  position: relative;
+  scroll-behavior: smooth;
+  width: 100%;
+  display: flex;
+  margin: 50px 0;
+  margin-bottom: 0;
+  padding-bottom: 50px;
+  flex-direction: column;
+}
+.about-container .title-container {
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+.about-container .title-container .title-text {
+  font-size: min(10vw, 3rem);
+  position: relative;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.about-container .title-container .title-text::before {
+  position: absolute;
+  content: "";
+  inset: 0.5rem;
+  filter: blur(5rem);
+  background: linear-gradient(to right, aqua, #FF2171);
+}
+.about-container .title-container .subheader-text {
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+.about-container .about-content {
+  flex-direction: column;
+}
+.about-container .about-content .section {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 10px 0;
+}
+.about-container .about-content .section img {
+  width: 90%;
+  height: 80%;
+  border-radius: 15px;
+  max-width: 450px;
+  max-height: 350px;
+}
+.about-container .about-content .section .text {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+}
+.about-container .about-content .section .text .header-text {
+  margin-bottom: 5px;
+}
+.about-container .about-content .section .text .paragraph-text {
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.about-container .about-content .section .logo {
+  filter: invert(100%);
+}
+.about-container .about-content hr {
+  margin: 25px 0;
+}
+.about-container .goal-content {
+  display: grid;
+  position: relative;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 80%;
+  margin: 25px auto;
+  gap: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 3px;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.1);
+}
+.about-container .goal-content .card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.about-container .goal-content .card .paragraph-text {
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.about-container .goal-content .purpose-content {
+  border: 2px solid #1327de;
+}
+.about-container .goal-content .attitude-content {
+  border: 2px solid #4d05b8;
+}
+.about-container .goal-content .mission-content {
+  border: 2px solid #7a06d9;
+}
+
+@media (min-width: 600px) {
+  .about-container .about-content .section img {
+    width: 65%;
+    height: 55%;
+  }
+}
+@media (min-width: 900px) {
+  .about-container .about-content .section {
+    flex-direction: row;
+    gap: 50px;
+  }
+  .about-container .about-content .section img {
+    width: 50%;
+    height: 50%;
+  }
+  .about-container .about-content .pandemic-content, .about-container .about-content .show-content, .about-container .about-content .today-content {
+    flex-direction: row-reverse;
+  }
+  .about-container .goal-content {
+    gap: 75px;
+  }
+}/*# sourceMappingURL=AboutUs.css.map */

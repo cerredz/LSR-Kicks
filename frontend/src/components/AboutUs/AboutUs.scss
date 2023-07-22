@@ -1,0 +1,215 @@
+@import "../Variables/Variables.scss";
+
+
+.about-container {
+
+    position: relative;
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    margin: 50px 0;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    flex-direction: column;
+    
+
+    .title-container {
+        flex-direction: column;
+        margin-bottom: 45px;
+
+        .title-text {
+            font-size: min(10vw, 3rem);
+            position: relative;
+            font-weight: 700;
+            letter-spacing: 3px;
+            
+    
+            &::before {
+                position: absolute;
+                content: '';
+                inset: .5rem;
+                filter: blur(5rem);
+                background: linear-gradient(to right, aqua, $primary-pink);
+            }
+        }
+
+        .subheader-text {
+            margin-top: 15px;
+            color: rgba(255,255,255,.5);
+            font-size: .9rem;
+            letter-spacing: 2px;
+
+        }
+    }
+
+    .about-content {
+        flex-direction: column;
+
+
+        .section {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin: 10px 0;
+
+            img {
+                width: 90%;
+                height: 80%;
+                border-radius: 15px;
+                max-width: 450px;
+                max-height: 350px;
+                
+            }
+
+            .text {
+
+                background: rgba(255,255,255,.1);
+                padding: 25px ;
+                border-radius: 10px;
+                
+                
+                .header-text {
+                    margin-bottom: 5px;
+                }
+
+                .paragraph-text {
+                    letter-spacing: 2px;
+                    color: rgba(255,255,255,.5);
+                    
+                }
+            }
+
+            .logo {
+                filter: invert(100%);
+            }
+
+        }
+
+        hr {
+            margin: 25px 0;
+
+            
+            
+        }
+
+       
+    }
+
+    .goal-content {
+        display: grid;
+        position: relative;
+        place-items: center;
+        
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        width: 80%;
+        margin: 25px auto;
+        gap: 25px;
+        background: rgba(255,255,255,.1);
+        padding: 50px;
+        border-radius: 3px;
+        box-shadow: 0 0 2rem rgba(255,255,255,.1);
+        
+        .card {
+            background: rgba(255,255,255,.1);
+            padding: 25px;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            .paragraph-text {
+                font-weight: 400;
+                font-style: italic;
+                letter-spacing: 2px;
+                color: rgba(255,255,255,.4);
+                font-size: 1rem;
+                margin-top: 5px;
+                line-height: 1.5;
+                
+                
+            }
+        }
+
+       
+
+        .purpose-content {
+            border: 2px solid $primary-blue;
+        }
+
+        .attitude-content {
+            border: 2px solid #4d05b8;
+        }
+
+        .mission-content {
+            border: 2px solid $primary-purple;
+        }
+    }
+    
+}
+
+//shrink the images until we change to flex row
+@media (min-width: 600px) {
+
+
+    .about-container {
+
+        .about-content {
+
+            .section {
+                
+
+
+                img {
+                    width: 65%;
+                    height: 55%;
+                }
+                
+            }
+        }
+    }
+}
+
+//change sections to horizontal flex
+@media (min-width: 900px) {
+
+    .about-container {
+
+        .about-content {
+
+            .section {
+
+                
+                
+
+                flex-direction: row;
+                gap: 50px;
+
+                img {
+                    width: 50%;
+                    height: 50%;
+                    
+                    
+
+                }
+            }
+
+            .pandemic-content, .show-content, .today-content {
+                flex-direction: row-reverse;
+            }
+
+        }
+
+        .goal-content {
+
+            gap: 75px;
+        }
+    }
+    
+}
+
+
