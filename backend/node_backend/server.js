@@ -16,10 +16,10 @@ app.use(express.json());
 
 //create the connection for the sql database
 const database = mySQL.createConnection({
-    user: `${process.env.SQL_USER}`,
-    host: 'localhost',
-    password: `${process.env.SQL_PASSWORD}`,
-    database: 'lsr_kicks'
+    user: `${process.env.DB_USERNAME}`,
+    host: `${process.env.DB_HOST}`,
+    password: `${process.env.DB_PASSWORD}`,
+    database: `${process.env.DB_DBNAME}`
 })
 
 //connect to the sql database

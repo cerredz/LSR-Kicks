@@ -131,7 +131,7 @@ const Footer = (props) => {
 
         <div data-aos="fade-up" className="footer-legal">
             <div className="social-media">
-                <a href="https://www.youtube.com/results?search_query=lsr+kicks&sp=EgIQAg%253D%253D"> <AiOutlineYoutube className='youtube'/> </a> 
+                <a href="https://www.youtube.com/channel/UCvG6BEAz_x6aNSB93ybqGTQ"> <AiOutlineYoutube className='youtube'/> </a> 
                 <a href="https://www.instagram.com/lsr.kicks/"> <AiOutlineInstagram className='instagram'/> </a>
                 <a href="https://twitter.com/LSRkicks"> <AiFillTwitterCircle className='twitter'/> </a>
                 <a href=""> <FaSnapchat className='snapchat'/> </a>
