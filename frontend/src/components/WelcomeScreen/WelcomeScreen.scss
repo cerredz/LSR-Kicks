@@ -396,6 +396,7 @@
 
                 .brand {
 
+                    
 
                     .brand-title {
                         
@@ -429,7 +430,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     
 
     .welcome-container {
@@ -461,21 +462,33 @@
 
             .brands-container {
                 width: 100%;
-                
                 margin: 25px 0;
                 
 
                 .brand {
-                    scale: .8;
-                    margin: 0;
-                    grid-template-columns: 1fr .5fr 1fr;
                     
-                    .brand-shoe {
+                    width: 75%;
+                    grid-template-columns: 1fr 1.5fr;
+                    min-width: 385px;
 
-                        .jordan {
-                            scale: .9;
+
+                    .brand-title {
+                         cursor: pointer;
+                    }
+
+
+                    .brand-shoe {
+                        cursor: pointer;
+                        .nike, .yeezy, .jordan {
+                            scale: .8;
                         }
                     }
+
+                    .brand-arrow{
+                        display: none;
+                    }
+
+
 
                     
                 }

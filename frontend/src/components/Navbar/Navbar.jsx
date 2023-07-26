@@ -295,7 +295,7 @@ const capitalizeFirstLetter = (str) => {
                     {categoriesClassName === "categories-container down" && window.innerWidth < 900 ? (
                         <>
                             <li id='contact' className='header-text'><Link to='/contact' className='link-text' onClick={handleNavClick}> Contact Us </Link></li>
-                            <li id='about' className='header-text ' onClick={handleNavClick}>About Us</li>
+                            <li id='about' className='header-text ' onClick={handleNavClick}><Link to="/lsr-info/about-us">About Us</Link></li>
                             
                         </>
 

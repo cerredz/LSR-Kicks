@@ -431,3 +431,55 @@
 }
 
 
+@media (max-width: 600px) {
+
+   .buy-container {
+
+    .shoe-container {
+        .shoe-image-container {
+
+
+            
+
+            .jordan {
+                width: 80%;
+                
+            }
+
+            .nike {
+                width: 70%;
+            }
+        }
+    }
+
+    .buttons-container {
+        padding-top: 25px;
+        flex-direction: column;
+    }
+   }
+}
+
+@media (max-width: 400px) {
+
+    .buy-container {
+ 
+     .shoe-container {
+         .shoe-image-container {
+ 
+             .jordan {
+                 width: 55%;
+                 height: 30%;
+                 
+             }
+
+             .nike{
+                width: 45%;
+                height: 30%;
+             }
+
+             
+         }
+     }
+    }
+ }
+

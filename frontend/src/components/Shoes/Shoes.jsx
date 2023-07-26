@@ -61,6 +61,7 @@ const Shoes = (props) => {
         //user did not click navbar, but rather popular brands banner
         if(shoeCategory === "Nike" || shoeCategory === "Jordan" || shoeCategory === "Yeezy") {
           setBannerMessage("Mens Shoes");
+          
         }
 
         //store shoe database into useState variable
@@ -68,24 +69,15 @@ const Shoes = (props) => {
           setShoeData(data);
         })
 
-
-        if(props.filter === "nike") {
-          setSelectedBrands((prevBrands) => {
-            return [...prevBrands, "Nike"];
-          })
-        } else if (props.filter === "jordan") {
-          setSelectedBrands((prevBrands) => {
-            return [...prevBrands, "Jordan"];
-          })
-        } else if (props.filter === "yeezy") {
-          setSelectedBrands((prevBrands) => {
-            return [...prevBrands, "Yeezy"];
-          })
-        }
-
         
-        //user clicked one of the three cards in the "Products" component
-        if (filters === "bestsellers") {
+        if(filters === "nike") {
+          setSelectedBrands(["Nike"]);
+        } else if (filters === "jordan") {
+          setSelectedBrands(["Jordan"]);
+        } else if (filters === "yeezy") {
+          setSelectedBrands(["Yeezy"]);
+        }//user clicked one of the three cards in the "Products" component
+        else if (filters === "bestsellers") {
 
           const bestSellers = ["Nike Dunk" , "Jordan 4", "Yeezy Slide"];
           setSelectedBrands(bestSellers);

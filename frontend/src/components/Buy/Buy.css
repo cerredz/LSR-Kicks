@@ -375,4 +375,26 @@ img {
     letter-spacing: 2px;
     font-style: italic;
   }
+}
+@media (max-width: 600px) {
+  .buy-container .shoe-container .shoe-image-container .jordan {
+    width: 80%;
+  }
+  .buy-container .shoe-container .shoe-image-container .nike {
+    width: 70%;
+  }
+  .buy-container .buttons-container {
+    padding-top: 25px;
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .buy-container .shoe-container .shoe-image-container .jordan {
+    width: 55%;
+    height: 30%;
+  }
+  .buy-container .shoe-container .shoe-image-container .nike {
+    width: 45%;
+    height: 30%;
+  }
 }/*# sourceMappingURL=Buy.css.map */

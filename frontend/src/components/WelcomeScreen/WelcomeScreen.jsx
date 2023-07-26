@@ -183,14 +183,14 @@ const WelcomeScreen = () => {
                 {brands && brands.map((brand, index) => (
                     <>
                     
-                        <div data-aos={brand.fade} className={`brand ${brand.title}`}>
+                        <div data-aos={brand.fade} className={`brand ${brand.title}`} >
                            
-                            <div className={`brand-title flex ${brand.open ? "open" : ""}`}>
+                            <div onClick={() => navigate(`/shoes/mens/${brand.imageClassname}`)} className={`brand-title flex ${brand.open ? "open" : ""}`}>
                                 <h1 className='header-text'>{brand.title}</h1>
                                 <h1 className="paragraph-text">{brand.description}</h1>
                             </div>  
 
-                            <div className={`brand-shoe flex `}>
+                            <div onClick={() => navigate(`/shoes/mens/${brand.imageClassname}`)} className={`brand-shoe flex `}>
                                 <img className={brand.imageClassname} src={brand.image} alt="" />
                                 
                             </div>  
@@ -221,7 +221,7 @@ const WelcomeScreen = () => {
                                     </div>
                                     
                                     <div className="btn-container flex">
-                                        <button  className='btn-shop' onClick={() => navigate("/shoes/nike")}>Shop Now</button>
+                                        <button  className='btn-shop' onClick={() => navigate("/shoes/mens/nike")}>Shop Now</button>
                                     </div>
                                     
                                 </>
@@ -243,7 +243,7 @@ const WelcomeScreen = () => {
                                     </div>
                                     
                                     <div className="btn-container flex">
-                                        <button  className='btn-shop' onClick={() => navigate("/shoes/jordan")}>Shop Now</button>
+                                        <button  className='btn-shop' onClick={() => navigate("/shoes/mens/jordan")}>Shop Now</button>
                                     </div>
                                     
                                 </>
@@ -265,7 +265,7 @@ const WelcomeScreen = () => {
                                     </div>
                                     
                                     <div className="btn-container flex">
-                                        <button className='btn-shop' onClick={() => navigate("/shoes/yeezy")}>Shop Now</button>
+                                        <button className='btn-shop' onClick={() => navigate("/shoes/mens/yeezy")}>Shop Now</button>
                                     </div>
                                     
                                 </>

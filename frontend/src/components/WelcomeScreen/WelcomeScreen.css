@@ -318,7 +318,7 @@ img {
     transition: 0.1s ease-in-out;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .welcome-container {
     padding: 0;
     margin: 0;
@@ -345,12 +345,21 @@ img {
     margin: 25px 0;
   }
   .welcome-container .welcome-content .brands-container .brand {
-    scale: 0.8;
-    margin: 0;
-    grid-template-columns: 1fr 0.5fr 1fr;
+    width: 75%;
+    grid-template-columns: 1fr 1.5fr;
+    min-width: 385px;
   }
-  .welcome-container .welcome-content .brands-container .brand .brand-shoe .jordan {
-    scale: 0.9;
+  .welcome-container .welcome-content .brands-container .brand .brand-title {
+    cursor: pointer;
+  }
+  .welcome-container .welcome-content .brands-container .brand .brand-shoe {
+    cursor: pointer;
+  }
+  .welcome-container .welcome-content .brands-container .brand .brand-shoe .nike, .welcome-container .welcome-content .brands-container .brand .brand-shoe .yeezy, .welcome-container .welcome-content .brands-container .brand .brand-shoe .jordan {
+    scale: 0.8;
+  }
+  .welcome-container .welcome-content .brands-container .brand .brand-arrow {
+    display: none;
   }
   .welcome-container .welcome-content .brands-container .caurosel-container {
     width: 300px;
