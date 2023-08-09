@@ -27,12 +27,10 @@ const Products = (props) => {
     }, [])
 
     
-
     //function to scroll one shoe to the left
     const scrollLeft = () => {
 
         const shoes = document.querySelector(".products");
-        
         shoes.scrollBy(-245,0);
     }
 

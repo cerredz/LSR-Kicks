@@ -37,9 +37,9 @@ database.connect((error) => {
 
 //configure paypal settings in order to use the api
 paypal.configure({
-  mode: 'sandbox',
-  client_id: `${process.env.PAYPAL_CLIENT_ID}`,
-  client_secret: `${process.env.PAYPAL_SECRET_KEY}`
+  mode: 'live',
+  client_id: `${process.env.PAYPAL_LIVE_CLIENT_ID}`,
+  client_secret: `${process.env.PAYPAL_LIVE_SECRET_ID}`
 })
 
 // create reusable transporter object using the default SMTP transport
