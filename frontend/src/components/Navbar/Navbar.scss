@@ -100,9 +100,6 @@ nav {
                     
                 }
             } 
-
-            
-            
         }
 
         .sign-in-container {
@@ -117,6 +114,7 @@ nav {
                 &:hover {
                     transform: translateY(-10px) scale(1.1);
                     letter-spacing: 3px;
+                    
                 }
             }
             
@@ -157,9 +155,6 @@ nav {
 
             background: $blackColor;
             color: $darkerWhite;
-            
-            
-            
         
 
             &:hover {
@@ -633,6 +628,8 @@ nav {
                 &:hover {
                     background: $primary-blue;
                     box-shadow: none;
+                    
+                    
                 }
 
 

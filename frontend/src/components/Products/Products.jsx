@@ -28,17 +28,19 @@ const Products = (props) => {
 
     
     //function to scroll one shoe to the left
-    const scrollLeft = () => {
+    const scrollLeft = (className) => {
 
-        const shoes = document.querySelector(".products");
+        const shoes = document.querySelector(className);
         shoes.scrollBy(-245,0);
     }
 
     //function to scroll one shoe to the right
-    const scrollRight = () => {
+    const scrollRight = (className) => {
         
-        const shoes = document.querySelector(".products");
+        const shoes = document.querySelector(className);
         shoes.scrollBy(245,0);
+
+        
     }
 
 
@@ -55,10 +57,10 @@ const Products = (props) => {
 
     <div className='products-container'>
         
-        <div data-aos="fade-right" className="product-names flex">
+        <div  className="product-names flex">
             
             <div className="product-name flex" onClick={() => setSelectedShoe1("Jordan 1 ")}>
-                {selectedShoe1 === "Jordan 1 " && (<BsArrowRight data-aos="fade-right"/>)}
+                {selectedShoe1 === "Jordan 1 " && (<BsArrowRight />)}
                 <h1 
                 className={`
                 header-text 
@@ -92,13 +94,13 @@ const Products = (props) => {
             </div>
 
             <div className="arrows">
-                <IoIosArrowBack onClick={() => scrollLeft()}/>
-                <IoIosArrowForward onClick={() => scrollRight()}/>
+                <IoIosArrowBack onClick={() => scrollLeft(".jordan-products")}/>
+                <IoIosArrowForward onClick={() => scrollRight(".jordan-products")}/>
             </div>
 
         </div>
         
-        <div className="products ">
+        <div className="jordan-products products">
         {mensShoes
         .filter((shoe) => shoe.Shoe__Name.includes(selectedShoe1))
         .map((shoe, index) => (
@@ -120,10 +122,10 @@ const Products = (props) => {
         ))}
         </div> 
 
-        <div data-aos="fade-right" className="product-names flex">
+        <div  className="product-names flex">
             
             <div className="product-name flex" onClick={() => setSelectedShoe2("Nike Dunk")}>
-                {selectedShoe2 === "Nike Dunk" && (<BsArrowRight data-aos="fade-right"/>)}
+                {selectedShoe2 === "Nike Dunk" && (<BsArrowRight/>)}
                 <h1 
                 className={`
                 header-text 
@@ -134,7 +136,7 @@ const Products = (props) => {
                 </h1>
             </div>
             <div className="product-name flex " onClick={() => setSelectedShoe2("Yeezy 350")}>
-                {selectedShoe2 === "Yeezy 350" && (<BsArrowRight data-aos="fade-right"/>)}
+                {selectedShoe2 === "Yeezy 350" && (<BsArrowRight />)}
                 <h1 
                 className={`
                 header-text
@@ -145,7 +147,7 @@ const Products = (props) => {
                 </h1>
             </div>
             <div className="product-name flex" onClick={() => setSelectedShoe2("Yeezy Slide")}>
-                {selectedShoe2 === "Yeezy Slide" && (<BsArrowRight data-aos="fade-right"/>)}
+                {selectedShoe2 === "Yeezy Slide" && (<BsArrowRight />)}
                 <h1 
                 className={`
                 header-text
@@ -157,15 +159,15 @@ const Products = (props) => {
             </div>
 
             <div className="arrows">
-                <IoIosArrowBack onClick={() => scrollLeft()}/>
-                <IoIosArrowForward onClick={() => scrollRight()}/>
+                <IoIosArrowBack onClick={() => scrollLeft(".nike-products")}/>
+                <IoIosArrowForward onClick={() => scrollRight(".nike-products")}/>
             </div>
 
 
 
         </div>
 
-        <div className="products ">
+        <div className="nike-products products">
         {mensShoes
         .filter((shoe) => shoe.Shoe__Name.includes(selectedShoe2))
         .map((shoe, index) => (

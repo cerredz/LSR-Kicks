@@ -123,6 +123,7 @@ useEffect(() => {
     });
 
     setTotalPrice(price);
+    
 
 }, [bagItems])
 

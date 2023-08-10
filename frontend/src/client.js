@@ -14,7 +14,6 @@ export const client = sanityClient({
 });
 
 export const mensDatabase = () => {
-    
     return client.fetch('*[_type == "Mens__Shoes"]');
 }
 
