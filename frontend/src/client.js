@@ -23,7 +23,7 @@ export const urlFor = (source) => builder.image(source);
 
 export const checkEmailValidity = (email) => {
 
-    return Axios.get(`http://localhost:3001/checkEmail/${email}`);
+    return Axios.get(`${process.env.REACT_APP_PRODUCTION_URL}/checkEmail/${email}`);
 }
 
 

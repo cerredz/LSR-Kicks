@@ -128,9 +128,6 @@ const handleSubmitClick = async (e) => {
 
 }
 
-
-
-
   return (
     <div  className='contact-container flex'>
 

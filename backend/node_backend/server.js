@@ -153,8 +153,6 @@ app.post("/paypal/:email/:amount", (req, res) => {
     console.log("Post Request Has Been Recieved. Making the PayPal payment now...")
 
     
-    
-
     const itemDetails = bagItems.map((item) => {
       
       return {
@@ -181,8 +179,8 @@ app.post("/paypal/:email/:amount", (req, res) => {
         payment_method: 'paypal'
       },
       redirect_urls: {
-        return_url: `http://localhost:3001/success?amount=${encodeURIComponent(amount)}&itemSizes=${encodeURIComponent(JSON.stringify(itemSizes))}&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&state=${encodeURIComponent(state)}&address=${encodeURIComponent(address)}&number=${encodeURIComponent(number)}&itemDetails=${encodeURIComponent(JSON.stringify(itemDetails))}`,
-        cancel_url: 'http://localhost:3001/cancel'
+        return_url: `http://lsrkicks/success?amount=${encodeURIComponent(amount)}&itemSizes=${encodeURIComponent(JSON.stringify(itemSizes))}&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&state=${encodeURIComponent(state)}&address=${encodeURIComponent(address)}&number=${encodeURIComponent(number)}&itemDetails=${encodeURIComponent(JSON.stringify(itemDetails))}`,
+        cancel_url: 'http://lsrkicks/cancel'
       },
       transactions: [{
         amount: {
@@ -349,7 +347,7 @@ app.get("/success", (req, res) => {
       );
   
       //redirect the user to the purchase successful page on the frontend
-      res.redirect(`http://localhost:3000/success/${userEmail}/${paymentID}`);
+      res.redirect(`http://lsrkicks/success/${userEmail}/${paymentID}`);
     }
   
   })
@@ -357,7 +355,7 @@ app.get("/success", (req, res) => {
 
 app.get("/cancel", (req, res) => {
   console.log("Purchase Cancelled, Redirecting Back to Home Page...");
-  res.redirect("http://localhost:3000/");
+  res.redirect("http://lsrkicks/");
 })
 
 
