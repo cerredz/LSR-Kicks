@@ -91,11 +91,14 @@ app.post('/adduser', (req, res) => {
 /*--------------------------------------------------------------------------------------------------------- */
 app.post("/send/email", (req,res) => {
 
+    
     const name = req.body.name;
     const email = req.body.email;
     const phoneNumber = req.body.phoneNumber;
     const subject = req.body.subject;
     const message = req.body.message;
+
+    console.log("Sending email to ", email, "...")
 
     //configure mail options
     let mailOptions = {
@@ -107,7 +110,7 @@ app.post("/send/email", (req,res) => {
 
     mailTransporter.sendMail(mailOptions, (error, res) => {
         if(error) {
-            console.log(error);
+            console.log("Error sending mail", error);
         }
     })
 
