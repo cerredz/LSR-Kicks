@@ -94,7 +94,7 @@ const Shipping = (props) => {
                 try {
                     const userInfoJSON = JSON.stringify(userInfo);
                     
-                    const response = await Axios.post(`http://localhost:3001/paypal/${userInfoJSON.email}/${amount}`, 
+                    const response = await Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/paypal/${userInfoJSON.email}/${amount}`, 
                       {
                         items: JSON.parse(bagItems),
                         user: JSON.parse(userInfoJSON)
@@ -112,7 +112,7 @@ const Shipping = (props) => {
 
                 try {
                     const userInfoJSON = JSON.stringify(userInfo);
-                    const response = await Axios.post(`http://localhost:3001/create-stripe-checkout/${userInfoJSON.email}/${amount}`, {
+                    const response = await Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/create-stripe-checkout/${userInfoJSON.email}/${amount}`, {
                       items: JSON.parse(bagItems),
                       user: JSON.parse(userInfoJSON),
                     });

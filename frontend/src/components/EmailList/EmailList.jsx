@@ -68,7 +68,7 @@ const EmailList = (props) => {
         //if new valid user, make the call to the backend
       }else {
 
-        Axios.post("http://localhost:3001/emails", {
+        Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/emails`, {
           email: userEmail
         }).then((response) => {
           console.log('Email added to email list successfully');

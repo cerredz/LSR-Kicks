@@ -47,7 +47,7 @@ const Success = (props) => {
 
         //must check if the user's email and paymentID are in the database, that way we can correctly remove quantities from the database
         setTimeout(() => {
-          Axios.post("http://localhost:3001/check-payment", {
+          Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/check-payment`, {
           email: email,
           paymentID: paymentID
           }).then((res) => {

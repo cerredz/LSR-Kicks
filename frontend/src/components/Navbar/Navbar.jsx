@@ -109,6 +109,7 @@ useEffect(() => {
     })
     console.log(bagItems);
     console.log("Bag Size: " + bagSize);
+    
   
 
     
@@ -150,7 +151,8 @@ const handleSignInClick = () => {
         localStorage.setItem("email", data.user.email);
         setSignedIn(true);
         setUserEmail(data.user.email);
-        Axios.post('http://localhost:3001/adduser', {
+        
+        Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/adduser`, {
             email: data.user.email
         }).then(() => {
             console.log("Successfully added user to the database");

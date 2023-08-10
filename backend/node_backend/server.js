@@ -10,7 +10,9 @@ const paypal = require("paypal-rest-sdk");
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
 
-app.use(cors());
+app.use(cors({
+  origin: `${process.env.PRODUCTION_URL}`
+}));
 app.use(express.json());
 
 
@@ -632,11 +634,6 @@ app.get("/stripe/success/:email", (req, res) => {
       }
     }
   );
-
-  
-  
-
-  
 })
 
 const port = process.env.PORT || 3001;

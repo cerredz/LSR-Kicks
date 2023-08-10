@@ -113,8 +113,8 @@ const handleSubmitClick = async (e) => {
 
 
     if(validEmail) {
-
-        Axios.post("http://localhost:3001/send/email", {
+        
+        Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/send/email`, {
             name: name,
             email: email,
             phoneNumber: phonenumber,

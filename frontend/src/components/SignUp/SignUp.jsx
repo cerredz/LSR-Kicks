@@ -42,7 +42,7 @@ const SignUp = (props) => {
     const handleSignInClick = () => {
         signInWithPopup(auth,provider).then((data) => {
             localStorage.setItem("email", data.user.email);
-            Axios.post('http://localhost:3001/adduser', {
+            Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/adduser`, {
                 email: data.user.email
             }).then(() => {
                 console.log("Successfully added user to the database");
