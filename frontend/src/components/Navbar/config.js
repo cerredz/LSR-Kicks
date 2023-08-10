@@ -5,8 +5,6 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, initializeAuth} from "firebase/auth"
 
 
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyDyOVkUnpcQ37SCvbHbje9p38a7O-FXTWs",
   authDomain: "lsr-kicks.firebaseapp.com",

@@ -18,7 +18,6 @@ export const mensDatabase = () => {
     return client.fetch('*[_type == "Mens__Shoes"]');
 }
 
-
 const builder = ImageUrlBuilder(client);
 
 export const urlFor = (source) => builder.image(source);
