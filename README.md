@@ -21,9 +21,8 @@ LSR Kicks is a full-stack real-world shoe selling application that was created a
 
 # Website Preview 🎁
 
-![image](https://github.com/cerredz/lsr-kicks/assets/110927971/40f4eb6a-b147-4ecf-91d5-7bf669327805)
-![image](https://github.com/cerredz/lsr-kicks/assets/110927971/fc7de513-ab54-4a2a-9af6-ad602e6183d1)
-![image](https://github.com/cerredz/lsr-kicks/assets/110927971/106a58ef-ada6-430e-b3e0-424bed288f1f)
+
+https://github.com/cerredz/lsr-kicks/assets/110927971/7c188bcf-92e9-4f3f-b4eb-f8c57453abd2
 
 
 
