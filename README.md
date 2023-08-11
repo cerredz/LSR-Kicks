@@ -1,4 +1,7 @@
-# LSR Kicks 👟
+# LSR Kicks
+- to view full website make sure to visit [Link Text] (htts://lsrkicks.com)
+
+# Overiew
 
 
 Designed and implemented a full-stack shoe-selling web application using React, Node.js, MySQL, and Sanity, enabling users to explore a wide collections of footwear and make real payments.
