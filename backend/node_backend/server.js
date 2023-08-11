@@ -9,7 +9,6 @@ const nodemailer = require("nodemailer");
 const paypal = require("paypal-rest-sdk");
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
-
 app.use(cors());
 app.use(express.json());
 
@@ -111,6 +110,9 @@ app.post("/send/email", (req,res) => {
     mailTransporter.sendMail(mailOptions, (error, res) => {
         if(error) {
             console.log("Error sending mail", error);
+            res.status(500).send("Error sending email");
+        } else {
+          res.status(200).send("Email sent successfully")
         }
     })
 

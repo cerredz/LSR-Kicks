@@ -39,7 +39,6 @@ const ContactUs = (props) => {
         setName(event.target.value);
     }
     const updateEmail = (event) => {
-        
         setEmail(event.target.value);
     }
     const updatePhoneNumber = (event) => {
@@ -69,18 +68,10 @@ const ContactUs = (props) => {
         setTopic(topicValue);
     }, []);
 
-/*-------------------------------------------------------------------------------------------------------------- */
-//we need to create a helper function to validate whether or not the user imputted a correct email
-
-
-
-/*-------------------------------------------------------------------------------------------------------------- */
-//create a function to actually send the from when the submit button is pressed
+//create a function to actually send the email from when the submit button is pressed
 const handleSubmitClick = async (e) => {
 
-    
     e.preventDefault();
-    const validEmail = false;
 
     checkEmailValidity(email).then(response => {
         if(!response.data) {
@@ -92,40 +83,32 @@ const handleSubmitClick = async (e) => {
             
         } else {
 
-            setName("");
-            setPhoneNumber("");
-            setEmail("");
-            setTopic("");
-            setMessage("");
             //show thank you message for 4 seconds
             setShowThankYou(true);
             setTimeout(() => {
                 setShowThankYou(false);
             }, 4000);
 
-            validEmail = true;
-
-            
+            //call the backend to actually send the email to the LSRKicks email
+            Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/send/email`, {
+                name: name,
+                email: email,
+                phoneNumber: phonenumber,
+                subject: topic,
+                message: message
+            }).then(() => {
+                setName("");
+                setPhoneNumber("");
+                setEmail("");
+                setTopic("");
+                setMessage("");
+            }).catch((err) => {
+                console.log("Error calling the backend email function: ", err);
+            })
         }
     }).catch((error) => {
-        console.log(error);
+        console.log("Error validating the email address:", error);
     })
-
-
-    if(validEmail) {
-        
-        Axios.post(`${process.env.REACT_APP_PRODUCTION_URL}/send/email`, {
-            name: name,
-            email: email,
-            phoneNumber: phonenumber,
-            subject: topic,
-            message: message
-        }).catch((error) => {
-            console.log(error);
-        })
-    }
-    
-
 }
 
   return (
