@@ -115,13 +115,12 @@ app.post("/send/email", (req,res) => {
         }
     })
 
-    res.status(200).send("Email Sent Successfully");
+    
 
 })
 /*----------------------------------------------------------------------------------------------------------------------*/
 //create function that checks if a user exists in the database and send the result to the frontend
 /*--------------------------------------------------------------------------------------------------------------------  */
-
 app.get("/checkEmail/:email", (req, res) => {
 
     const email = req.params.email;

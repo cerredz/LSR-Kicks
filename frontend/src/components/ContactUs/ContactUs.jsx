@@ -174,7 +174,7 @@ const handleSubmitClick = async (e) => {
                             <label htmlFor="">Text Your Message Here: </label>
                             <textarea value={message} onChange={updateMessage} placeholder='Enter Your Message Here' rows="1" name="" id="" ></textarea> 
                         <div className='btn-container flex'>
-                            <button onClick={() => handleSubmitClick()} className='subheader-text' type='submit'>Submit</button>
+                            <button onClick={handleSubmitClick} className='subheader-text' type='submit'>Submit</button>
                         </div>
                             
                     </form>

@@ -16,7 +16,6 @@ const App = () => {
 
     <div style={{background: `#05010d`, overflow:`hidden`}}>
       
-      
       <Routes>
         <Route path="/" element={
           <>
@@ -26,8 +25,6 @@ const App = () => {
             <EmailList />
             <Info />
             <Questions />
-            
-            
           </>
         } />
 
