@@ -1,5 +1,5 @@
 # LSR Kicks
-- to view full website make sure to visit htts://lsrkicks.com
+- to view full website make sure to visit [LSR Kicks](https://www.lsrkicks.com)
 
 # Overiew
 
