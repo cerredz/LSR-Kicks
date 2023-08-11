@@ -89,7 +89,6 @@ app.post('/adduser', (req, res) => {
 //create a post function to send an email to a specified user
 /*--------------------------------------------------------------------------------------------------------- */
 app.post("/send/email", (req,res) => {
-
     
     const name = req.body.name;
     const email = req.body.email;
@@ -97,7 +96,7 @@ app.post("/send/email", (req,res) => {
     const subject = req.body.subject;
     const message = req.body.message;
 
-    console.log("Sending email to ", email, "...")
+    console.log("Sending email to ", email, "...");
 
     //configure mail options
     let mailOptions = {
@@ -115,6 +114,8 @@ app.post("/send/email", (req,res) => {
           res.status(200).send("Email sent successfully")
         }
     })
+
+    res.status(200).send("Email Sent Successfully");
 
 })
 /*----------------------------------------------------------------------------------------------------------------------*/
