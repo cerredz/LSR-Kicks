@@ -15,8 +15,8 @@ LSR Kicks is a full-stack real-world shoe selling application that was created a
 
 # Technologies / Frameworks / Libraries Used 💻 
 
-- Node.js, Express.js, mySQL, nodemailer, paypal-rest-sdk, stripe, Firebase
-- React, SCSS, AOS, Axios, Sanity
+- Node.js, Express.js, mySQL, nodemailer, paypal-rest-sdk, stripe, Firebase, cors, dotenv
+- React, SCSS, AOS, Axios, Sanity, react-icons
 
 
 # Website Preview 🎁
